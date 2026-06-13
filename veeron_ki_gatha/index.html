@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Veeron Ki Gatha — India's Military Gallantry Awards</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@300;400;500;600&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy:    #0A1628;
+    --navy2:   #0F1E3A;
+    --navy3:   #162645;
+    --gold:    #D4A017;
+    --gold2:   #C8960F;
+    --gold3:   #F5D06A;
+    --saffron: #FF6B00;
+    --crimson: #8B1A1A;
+    --ivory:   #F5F0E8;
+    --ivory2:  #EDE5D4;
+    --steel:   #4A5568;
+    --text:    #E8E0D0;
+    --muted:   #8A9BB5;
+    --white:   #FFFFFF;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--navy);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ─── HERO ─── */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px 80px;
+    overflow: hidden;
+    background: radial-gradient(ellipse at center top, #162645 0%, #0A1628 70%);
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: 
+      radial-gradient(circle at 20% 50%, rgba(212,160,23,0.06) 0%, transparent 50%),
+      radial-gradient(circle at 80% 50%, rgba(139,26,26,0.06) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  /* Spinning Chakra — The Signature */
+  .chakra-hero {
+    width: 160px;
+    height: 160px;
+    margin-bottom: 32px;
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  .chakra-hero svg {
+    width: 100%;
+    height: 100%;
+    animation: chakra-spin 40s linear infinite;
+  }
+
+  @keyframes chakra-spin {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+  }
+
+  .hero-eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    opacity: 0.85;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 7vw, 80px);
+    font-weight: 900;
+    line-height: 1.05;
+    color: var(--ivory);
+    margin-bottom: 8px;
+    letter-spacing: -1px;
+  }
+
+  .hero h1 span {
+    color: var(--gold);
+    font-style: italic;
+  }
+
+  .hero-sub {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(12px, 2vw, 15px);
+    letter-spacing: 3px;
+    color: var(--muted);
+    margin-bottom: 24px;
+    text-transform: uppercase;
+  }
+
+  .hero-tagline {
+    font-size: 16px;
+    color: var(--ivory2);
+    max-width: 560px;
+    font-style: italic;
+    opacity: 0.8;
+    margin-bottom: 40px;
+  }
+
+  .stat-row {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 48px;
+  }
+
+  .stat-block {
+    text-align: center;
+  }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: var(--gold);
+    display: block;
+    line-height: 1;
+  }
+
+  .stat-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-top: 4px;
+    display: block;
+  }
+
+  .scroll-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  .scroll-cta:hover { color: var(--gold); }
+  .scroll-cta .arrow { 
+    animation: bounce 2s infinite; 
+    font-size: 18px;
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(6px); }
+  }
+
+  /* ─── AWARDS SYSTEM ─── */
+  .awards-system {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+
+  .section-eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 5px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    opacity: 0.8;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 4vw, 46px);
+    color: var(--ivory);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .section-divider {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 20px auto 0;
+  }
+
+  .medal-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .medal-card {
+    background: var(--navy2);
+    border: 1px solid rgba(212,160,23,0.15);
+    border-radius: 8px;
+    padding: 28px 24px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s, border-color 0.25s;
+  }
+
+  .medal-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(212,160,23,0.4);
+  }
+
+  .medal-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+  }
+
+  .medal-card.pvc::before { background: linear-gradient(90deg, #D4A017, #F5D06A, #D4A017); }
+  .medal-card.mvc::before { background: linear-gradient(90deg, #A8C0D6, #D0E4F0, #A8C0D6); }
+  .medal-card.vc::before  { background: linear-gradient(90deg, #7BAA8B, #A8D4B8, #7BAA8B); }
+  .medal-card.ac::before  { background: linear-gradient(90deg, #D4A017, #F5D06A, #D4A017); }
+  .medal-card.kc::before  { background: linear-gradient(90deg, #B0B8C8, #D4DCE8, #B0B8C8); }
+  .medal-card.sc::before  { background: linear-gradient(90deg, #8FAA8B, #B4D0B4, #8FAA8B); }
+
+  .medal-icon-wrap {
+    width: 52px; height: 52px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; margin-bottom: 16px; border: 2px solid;
+  }
+
+  .medal-card.pvc .medal-icon-wrap, .medal-card.ac .medal-icon-wrap { border-color: var(--gold); background: rgba(212,160,23,0.1); }
+  .medal-card.mvc .medal-icon-wrap, .medal-card.kc .medal-icon-wrap { border-color: #A8C0D6; background: rgba(168,192,214,0.1); }
+  .medal-card.vc  .medal-icon-wrap, .medal-card.sc .medal-icon-wrap { border-color: #7BAA8B; background: rgba(123,170,139,0.1); }
+
+  .medal-tier { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 4px; text-transform: uppercase; margin-bottom: 6px; opacity: 0.6; }
+  .medal-name { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--ivory); margin-bottom: 6px; line-height: 1.2; }
+  .medal-hindi { font-size: 13px; color: var(--gold); opacity: 0.7; margin-bottom: 12px; font-style: italic; }
+  .medal-desc { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 14px; }
+  .medal-stat { font-size: 12px; color: var(--ivory2); opacity: 0.6; border-top: 1px solid rgba(255,255,255,0.07); padding-top: 12px; }
+
+  .badge-wartime { display: inline-block; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; padding: 2px 8px; border-radius: 2px; background: rgba(139,26,26,0.3); color: #F8A0A0; border: 1px solid rgba(139,26,26,0.4); margin-bottom: 10px; font-family: 'Cinzel', serif; }
+  .badge-peacetime { display: inline-block; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; padding: 2px 8px; border-radius: 2px; background: rgba(50,100,70,0.3); color: #90D4A8; border: 1px solid rgba(50,100,70,0.4); margin-bottom: 10px; font-family: 'Cinzel', serif; }
+
+  /* ─── ERA FILTER ─── */
+  .filter-bar { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 50px; padding: 0 20px; }
+  .filter-btn { font-family: 'Cinzel', serif; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; padding: 8px 18px; background: var(--navy2); border: 1px solid rgba(212,160,23,0.2); color: var(--muted); border-radius: 3px; cursor: pointer; transition: all 0.2s; }
+  .filter-btn:hover, .filter-btn.active { background: rgba(212,160,23,0.15); border-color: var(--gold); color: var(--gold); }
+
+  /* ─── TIMELINE ─── */
+  .timeline-wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px 80px; position: relative; }
+  .timeline-spine { position: absolute; left: 50%; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, transparent, rgba(212,160,23,0.4) 5%, rgba(212,160,23,0.2) 90%, transparent); transform: translateX(-50%); }
+  
+  .era-block { margin-bottom: 70px; }
+  .era-label { text-align: center; position: relative; margin-bottom: 40px; z-index: 2; }
+  .era-pill { display: inline-block; font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; padding: 8px 24px; background: var(--navy3); border: 1px solid var(--gold); color: var(--gold); border-radius: 30px; }
+
+  .hero-cards { display: flex; flex-direction: column; gap: 28px; }
+  .hero-entry { display: grid; grid-template-columns: 1fr 60px 1fr; align-items: start; gap: 0; }
+  .hero-entry .left-col { padding-right: 30px; }
+  .hero-entry .right-col { padding-left: 30px; }
+  .hero-entry.right-align .left-col { order: 1; }
+  .hero-entry.right-align .center-col { order: 2; }
+  .hero-entry.right-align .right-col { order: 3; }
+  .hero-entry.left-align .left-col { order: 3; }
+  .hero-entry.left-align .center-col { order: 2; }
+  .hero-entry.left-align .right-col { order: 1; }
+
+  .timeline-dot { width: 60px; display: flex; align-items: flex-start; justify-content: center; padding-top: 20px; position: relative; z-index: 2; }
+  .dot-inner { width: 14px; height: 14px; border-radius: 50%; background: var(--gold); border: 3px solid var(--navy); box-shadow: 0 0 0 2px var(--gold); flex-shrink: 0; }
+
+  .hero-card { background: var(--navy2); border: 1px solid rgba(212,160,23,0.12); border-radius: 8px; padding: 24px; transition: border-color 0.25s, transform 0.25s; cursor: pointer; position: relative; overflow: hidden; }
+  .hero-card:hover { border-color: rgba(212,160,23,0.45); transform: translateY(-2px); }
+  .hero-card.expanded { border-color: rgba(212,160,23,0.5); }
+  .hero-card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; opacity: 0; transition: opacity 0.3s; }
+  .hero-card:hover::after, .hero-card.expanded::after { opacity: 1; }
+  .hero-card.award-pvc::after { background: linear-gradient(90deg, transparent, #D4A017, transparent); }
+  .hero-card.award-mvc::after { background: linear-gradient(90deg, transparent, #A8C0D6, transparent); }
+  .hero-card.award-vc::after  { background: linear-gradient(90deg, transparent, #7BAA8B, transparent); }
+  .hero-card.award-ac::after  { background: linear-gradient(90deg, transparent, #D4A017, transparent); }
+
+  .card-award-badge { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
+  .card-award-badge.pvc-b  { color: var(--gold); }
+  .card-award-badge.mvc-b  { color: #A8C0D6; }
+  .card-award-badge.vc-b   { color: #7BAA8B; }
+  .card-award-badge.ac-b   { color: var(--gold); }
+  .award-dot { width: 6px; height: 6px; border-radius: 50%; display: inline-block; flex-shrink: 0; }
+  .pvc-b .award-dot, .ac-b .award-dot  { background: var(--gold); }
+  .mvc-b .award-dot  { background: #A8C0D6; }
+  .vc-b  .award-dot  { background: #7BAA8B; }
+
+  .card-name { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--ivory); margin-bottom: 4px; line-height: 1.2; }
+  .card-rank { font-size: 12px; color: var(--muted); margin-bottom: 10px; letter-spacing: 0.5px; }
+  .card-tagline { font-size: 13px; color: var(--ivory2); opacity: 0.8; line-height: 1.55; margin-bottom: 12px; }
+  .card-toggle { font-size: 11px; color: var(--gold); letter-spacing: 1px; opacity: 0.7; cursor: pointer; transition: opacity 0.2s; font-family: 'Cinzel', serif; text-transform: uppercase; display: flex; align-items: center; gap: 5px; }
+  .card-toggle:hover { opacity: 1; }
+
+  .card-expanded-content { display: none; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.07); margin-top: 14px; }
+  .hero-card.expanded .card-expanded-content { display: block; animation: fadeIn 0.4s ease; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+
+  .expanded-section { margin-bottom: 14px; }
+  .expanded-label { font-family: 'Cinzel', serif; font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); opacity: 0.6; margin-bottom: 5px; }
+  .expanded-text { font-size: 13px; color: var(--ivory2); opacity: 0.85; line-height: 1.65; }
+
+  .unsung-tag { display: inline-block; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; padding: 2px 8px; border-radius: 2px; background: rgba(212,160,23,0.15); color: var(--gold3); border: 1px solid rgba(212,160,23,0.3); font-family: 'Cinzel', serif; margin-bottom: 10px; }
+  .posthumous-tag { display: inline-block; font-size: 9px; letter-spacing: 2px; text-transform: uppercase; padding: 2px 8px; border-radius: 2px; background: rgba(139,26,26,0.2); color: #F8A0A0; border: 1px solid rgba(139,26,26,0.3); font-family: 'Cinzel', serif; margin-bottom: 10px; margin-left: 6px; }
+
+  .quote-block { border-left: 2px solid var(--gold); padding-left: 14px; margin: 12px 0; font-style: italic; font-size: 13px; color: var(--ivory2); opacity: 0.75; line-height: 1.6; }
+
+  /* ─── INSIGHT PANELS ─── */
+  .insight-band { background: var(--navy3); border-top: 1px solid rgba(212,160,23,0.15); border-bottom: 1px solid rgba(212,160,23,0.15); padding: 80px 20px; margin: 60px 0; }
+  .insight-inner { max-width: 1100px; margin: 0 auto; }
+  .insight-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px; }
+  .insight-card { background: var(--navy2); border: 1px solid rgba(212,160,23,0.1); border-radius: 8px; padding: 32px 24px; position: relative; }
+  .insight-card::before { content: '★'; position: absolute; top: 20px; right: 24px; font-size: 24px; color: var(--gold); opacity: 0.2; }
+  .insight-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; color: var(--ivory); margin-bottom: 12px; }
+  .insight-body { font-size: 13px; color: var(--muted); line-height: 1.65; }
+
+  /* ─── CHART SECTION ─── */
+  .chart-section { max-width: 1100px; margin: 0 auto; padding: 80px 20px; }
+  .chart-container { background: var(--navy2); border: 1px solid rgba(212,160,23,0.15); border-radius: 12px; padding: 40px; display: flex; flex-direction: column; gap: 30px; }
+  
+  .chart-row { display: flex; align-items: center; gap: 20px; }
+  .chart-label { width: 120px; font-family: 'Cinzel', serif; font-size: 11px; letter-spacing: 1px; color: var(--ivory2); text-align: right; }
+  .chart-bar-container { flex: 1; height: 24px; background: rgba(255,255,255,0.05); border-radius: 12px; overflow: hidden; position: relative; }
+  .chart-bar { height: 100%; border-radius: 12px; transform-origin: left; display: flex; align-items: center; justify-content: flex-end; padding-right: 12px; font-weight: 700; font-size: 11px; color: var(--navy); transition: width 1.5s cubic-bezier(0.2, 0.8, 0.2, 1); width: 0; }
+  
+  .bar-pvc { background: linear-gradient(90deg, #C8960F, #F5D06A); }
+  .bar-ac { background: linear-gradient(90deg, #7BAA8B, #A8D4B8); }
+  
+  /* ─── FOOTER ─── */
+  .footer { background: #060D1A; border-top: 1px solid rgba(212,160,23,0.15); padding: 60px 20px; text-align: center; }
+  .footer-chakra { width: 40px; height: 40px; margin: 0 auto 16px; opacity: 0.3; animation: chakra-spin 20s linear infinite; }
+  .footer-text { font-size: 13px; color: var(--muted); line-height: 1.7; max-width: 500px; margin: 0 auto; }
+  .footer-quote { font-family: 'Playfair Display', serif; font-size: 15px; font-style: italic; color: var(--ivory2); opacity: 0.6; margin-bottom: 14px; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 768px) {
+    .hero-entry { grid-template-columns: 24px 1fr; }
+    .hero-entry .left-col, .hero-entry.left-align .right-col { display: none; }
+    .hero-entry .center-col { width: 24px; flex-shrink: 0; }
+    .hero-entry .right-col, .hero-entry.left-align .left-col { order: unset !important; padding-left: 14px; padding-right: 0; grid-column: 2; }
+    .hero-entry.left-align .center-col { order: 1; }
+    .hero-entry.left-align .left-col { order: 2; }
+    .timeline-spine { left: 12px; }
+    .chart-row { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .chart-label { text-align: left; }
+  }
+
+  /* Entry animation */
+  .fade-up { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="chakra-hero">
+    <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="80" cy="80" r="74" stroke="#D4A017" stroke-width="1.5" opacity="0.3"/>
+      <circle cx="80" cy="80" r="60" stroke="#D4A017" stroke-width="1" opacity="0.2"/>
+      <circle cx="80" cy="80" r="20" fill="none" stroke="#D4A017" stroke-width="2.5" opacity="0.8"/>
+      <!-- 24 spokes -->
+      <g opacity="0.65" stroke="#D4A017" stroke-width="1.2">
+        <line x1="80" y1="6" x2="80" y2="60"/> <line x1="80" y1="100" x2="80" y2="154"/>
+        <line x1="154" y1="80" x2="100" y2="80"/> <line x1="6" y1="80" x2="60" y2="80"/>
+        <line x1="130.5" y1="29.5" x2="94.2" y2="65.8"/> <line x1="65.8" y1="94.2" x2="29.5" y2="130.5"/>
+        <line x1="29.5" y1="29.5" x2="65.8" y2="65.8"/> <line x1="94.2" y1="94.2" x2="130.5" y2="130.5"/>
+        <line x1="147" y1="55" x2="97.5" y2="72.5"/> <line x1="62.5" y1="87.5" x2="13" y2="105"/>
+        <line x1="13" y1="55" x2="62.5" y2="72.5"/> <line x1="97.5" y1="87.5" x2="147" y2="105"/>
+        <line x1="105" y1="13" x2="87.5" y2="62.5"/> <line x1="72.5" y1="97.5" x2="55" y2="147"/>
+        <line x1="55" y1="13" x2="72.5" y2="62.5"/> <line x1="87.5" y1="97.5" x2="105" y2="147"/>
+        <line x1="138.5" y1="41.5" x2="91.5" y2="69"/> <line x1="68.5" y1="91" x2="21.5" y2="118.5"/>
+        <line x1="21.5" y1="41.5" x2="68.5" y2="69"/> <line x1="91.5" y1="91" x2="138.5" y2="118.5"/>
+        <line x1="118.5" y1="21.5" x2="91" y2="68.5"/> <line x1="69" y1="91.5" x2="41.5" y2="138.5"/>
+        <line x1="41.5" y1="21.5" x2="69" y2="68.5"/> <line x1="91" y1="91.5" x2="118.5" y2="138.5"/>
+      </g>
+      <circle cx="80" cy="6" r="3" fill="#D4A017" opacity="0.8"/>
+      <circle cx="80" cy="154" r="3" fill="#D4A017" opacity="0.8"/>
+      <circle cx="154" cy="80" r="3" fill="#D4A017" opacity="0.8"/>
+      <circle cx="6" cy="80" r="3" fill="#D4A017" opacity="0.8"/>
+      <circle cx="80" cy="80" r="8" fill="#D4A017" opacity="0.9"/>
+      <circle cx="80" cy="80" r="4" fill="#0A1628"/>
+    </svg>
+  </div>
+  <p class="hero-eyebrow">भारत के वीरों की गाथा</p>
+  <h1>Veeron Ki <span>Gatha</span></h1>
+  <p class="hero-sub">Military Gallantry Awards of India · 1947–2026</p>
+  <p class="hero-tagline">"The soldier, above all other people, prays for peace — for he must suffer and bear the deepest wounds and scars of war."</p>
+  <div class="stat-row">
+    <div class="stat-block"><span class="stat-num">21</span><span class="stat-label">Param Vir Chakra</span></div>
+    <div class="stat-block"><span class="stat-num">213</span><span class="stat-label">Maha Vir Chakra</span></div>
+    <div class="stat-block"><span class="stat-num">87</span><span class="stat-label">Ashoka Chakra</span></div>
+    <div class="stat-block"><span class="stat-num">14</span><span class="stat-label">PVC Posthumous</span></div>
+  </div>
+  <div class="scroll-cta" onclick="document.getElementById('awards-system').scrollIntoView({behavior:'smooth'})">
+    <span>Discover the Heroes</span><span class="arrow">↓</span>
+  </div>
+</section>
+
+<!-- AWARDS SYSTEM -->
+<section class="awards-system" id="awards-system">
+  <div class="section-header fade-up">
+    <p class="section-eyebrow">The Six Pillars</p>
+    <h2 class="section-title">India's Gallantry Awards System</h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="medal-grid">
+    <!-- Wartime -->
+    <div class="medal-card pvc fade-up">
+      <div class="medal-icon-wrap">🥇</div><span class="badge-wartime">Wartime</span><p class="medal-tier">1st Precedence</p>
+      <h3 class="medal-name">Param Vir Chakra</h3><p class="medal-hindi">परम वीर चक्र · "Wheel of the Ultimate Brave"</p>
+      <p class="medal-desc">India's supreme wartime honor. Awarded for the most conspicuous bravery in the presence of the enemy.</p>
+      <p class="medal-stat">21 total · 14 posthumous · Designed by Savitri Khanolkar</p>
+    </div>
+    <div class="medal-card mvc fade-up">
+      <div class="medal-icon-wrap">🥈</div><span class="badge-wartime">Wartime</span><p class="medal-tier">2nd Precedence</p>
+      <h3 class="medal-name">Maha Vir Chakra</h3><p class="medal-hindi">महावीर चक्र · "Medal for Great Bravery"</p>
+      <p class="medal-desc">The second-highest wartime decoration, for conspicuous gallantry in the presence of the enemy — on land, sea, or air.</p>
+      <p class="medal-stat">213 total (including 2020 Galwan Valley clash)</p>
+    </div>
+    <div class="medal-card vc fade-up">
+      <div class="medal-icon-wrap">🎖️</div><span class="badge-wartime">Wartime</span><p class="medal-tier">3rd Precedence</p>
+      <h3 class="medal-name">Vir Chakra</h3><p class="medal-hindi">वीर चक्र · "Wheel of the Brave"</p>
+      <p class="medal-desc">The third-highest wartime gallantry award, for acts of bravery in the field of battle — close combat or leadership under fire.</p>
+      <p class="medal-stat">Thousands awarded since 1947</p>
+    </div>
+    <!-- Peacetime -->
+    <div class="medal-card ac fade-up">
+      <div class="medal-icon-wrap">✨</div><span class="badge-peacetime">Peacetime</span><p class="medal-tier">Peacetime PVC Equivalent</p>
+      <h3 class="medal-name">Ashoka Chakra</h3><p class="medal-hindi">अशोक चक्र · India's highest peacetime honor</p>
+      <p class="medal-desc">For valour, courage, or self-sacrifice away from the battlefield — counter-terrorism, disaster rescue, aerospace operations.</p>
+      <p class="medal-stat">87 total (Jan 2026) · Group Capt. Shubhanshu Shukla (Axiom-4)</p>
+    </div>
+    <div class="medal-card kc fade-up">
+      <div class="medal-icon-wrap">🔰</div><span class="badge-peacetime">Peacetime</span><p class="medal-tier">Peacetime MVC Equivalent</p>
+      <h3 class="medal-name">Kirti Chakra</h3><p class="medal-hindi">कीर्ति चक्र · "Medal of Glory"</p>
+      <p class="medal-desc">Second-highest peacetime gallantry award. For conspicuous bravery in non-combat situations.</p>
+      <p class="medal-stat">Regularly awarded · Civilian-eligible</p>
+    </div>
+    <div class="medal-card sc fade-up">
+      <div class="medal-icon-wrap">⭐</div><span class="badge-peacetime">Peacetime</span><p class="medal-tier">Peacetime VC Equivalent</p>
+      <h3 class="medal-name">Shaurya Chakra</h3><p class="medal-hindi">शौर्य चक्र · "Medal of Bravery"</p>
+      <p class="medal-desc">Third-highest peacetime award. For individual acts of courage in non-battlefield scenarios.</p>
+      <p class="medal-stat">Most numerously awarded peacetime medal</p>
+    </div>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<div style="max-width:1100px;margin:0 auto;padding:0 20px 30px;">
+  <div class="section-header fade-up" style="margin-bottom:30px;">
+    <p class="section-eyebrow">Hall of Heroes</p>
+    <h2 class="section-title">The Bravest of the Brave</h2>
+    <div class="section-divider"></div>
+  </div>
+</div>
+
+<div class="filter-bar fade-up">
+  <button class="filter-btn active" onclick="filterEra('all',this)">All Eras</button>
+  <button class="filter-btn" onclick="filterEra('1947',this)">Kashmir War 1947</button>
+  <button class="filter-btn" onclick="filterEra('1961',this)">Congo 1961</button>
+  <button class="filter-btn" onclick="filterEra('1962',this)">Sino-Indian 1962</button>
+  <button class="filter-btn" onclick="filterEra('1965',this)">Indo-Pak 1965</button>
+  <button class="filter-btn" onclick="filterEra('1971',this)">Liberation 1971</button>
+  <button class="filter-btn" onclick="filterEra('1987',this)">Siachen / IPKF</button>
+  <button class="filter-btn" onclick="filterEra('1999',this)">Kargil 1999</button>
+  <button class="filter-btn" onclick="filterEra('peace',this)">Peacetime & Recent</button>
+</div>
+
+<div class="timeline-wrap">
+  <div class="timeline-spine"></div>
+
+  <!-- ERA 1947 -->
+  <div class="era-block" data-era="1947">
+    <div class="era-label fade-up"><span class="era-pill">Kashmir War · 1947–48</span></div>
+    <div class="hero-cards">
+      <div class="hero-entry right-align fade-up">
+        <div class="left-col">
+          <div class="hero-card award-pvc" onclick="toggleCard(this)">
+            <div class="card-award-badge pvc-b"><span class="award-dot"></span> Param Vir Chakra</div>
+            <span class="posthumous-tag">Posthumous</span>
+            <h3 class="card-name">Major Somnath Sharma</h3>
+            <p class="card-rank">4 Kumaon Regiment · Badgam, Kashmir · Nov 3, 1947</p>
+            <p class="card-tagline">The first-ever PVC awardee. With a fractured arm in a plaster cast, he held Badgam airfield against 700+ raiders.</p>
+            <span class="card-toggle">Read Full Story ›</span>
+            <div class="card-expanded-content">
+              <div class="expanded-section">
+                <p class="expanded-label">The Battle</p>
+                <p class="expanded-text">On Nov 3, 1947, D Company of 4 Kumaon came under sudden attack by over 700 Pakistani raiders. Despite being ordered not to engage — and despite his plastered arm — Sharma chose to hold the airfield, buying critical time that saved Srinagar.</p>
+              </div>
+              <div class="quote-block">"The enemy is only 50 yards from us. We are heavily outnumbered. I shall not withdraw an inch but will fight to the last man and the last round."</div>
+              <div class="expanded-section">
+                <p class="expanded-label">Unsung Insight</p>
+                <p class="expanded-text">The PVC was designed by Savitri Khanolkar — a Swiss-born woman who married an Indian officer. Major Sharma was her son-in-law. She never told anyone of this connection during the medal's design process.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-dot center-col"><div class="dot-inner"></div></div>
+        <div class="right-col"></div>
+      </div>
+      
+      <div class="hero-entry left-align fade-up">
+        <div class="right-col">
+          <div class="hero-card award-pvc" onclick="toggleCard(this)">
+            <div class="card-award-badge pvc-b"><span class="award-dot"></span> Param Vir Chakra</div>
+            <span class="posthumous-tag">Posthumous</span><span class="unsung-tag">★ Often Overlooked</span>
+            <h3 class="card-name">Naik Jadunath Singh</h3>
+            <p class="card-rank">1 Rajput Regiment · Naushera, Kashmir · Feb 1948</p>
+            <p class="card-tagline">Repulsed enemy attacks single-handedly. Found later — standing dead in his trench.</p>
+            <span class="card-toggle">Read Full Story ›</span>
+            <div class="card-expanded-content">
+              <div class="expanded-section">
+                <p class="expanded-label">Last Stand</p>
+                <p class="expanded-text">Jadunath Singh led the defense of an isolated picquet at Naushera. When the third wave came, all his comrades were dead. He fixed his bayonet and charged alone into the massed raiders. His body was found standing against a sandbag wall — frozen in his last defiant stance.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-dot center-col"><div class="dot-inner"></div></div>
+        <div class="left-col"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ERA 1961 -->
+  <div class="era-block" data-era="1961">
+    <div class="era-label fade-up"><span class="era-pill">Congo · 1961 — India's Only PVC Beyond Its Borders</span></div>
+    <div class="hero-cards">
+      <div class="hero-entry right-align fade-up">
+        <div class="left-col">
+          <div class="hero-card award-pvc" onclick="toggleCard(this)">
+            <div class="card-award-badge pvc-b"><span class="award-dot"></span> Param Vir Chakra</div>
+            <span class="posthumous-tag">Posthumous</span><span class="unsung-tag">★ Only PVC Outside India</span>
+            <h3 class="card-name">Capt. Gurbachan Singh Salaria</h3>
+            <p class="card-rank">3/1 Gurkha Rifles · Elizabethville, Katanga, Congo · Dec 5, 1961</p>
+            <p class="card-tagline">Charged a Katangese rebel roadblock alone to free trapped UN forces.</p>
+            <span class="card-toggle">Read Full Story ›</span>
+            <div class="card-expanded-content">
+              <div class="expanded-section">
+                <p class="expanded-label">The Mission</p>
+                <p class="expanded-text">Salaria's platoon encountered a large rebel position. Under intense fire and flanked on multiple sides, Salaria charged the enemy himself, killing approximately 40 rebels with his kukri and sten gun before succumbing to a bullet in his throat.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-dot center-col"><div class="dot-inner"></div></div>
+        <div class="right-col"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ERA 1962 -->
+  <div class="era-block" data-era="1962">
+    <div class="era-label fade-up"><span class="era-pill">Sino-Indian War · 1962</span></div>
+    <div class="hero-cards">
+      <div class="hero-entry right-align fade-up">
+        <div class="left-col">
+          <div class="hero-card award-pvc" onclick="toggleCard(this)">
+            <div class="card-award-badge pvc-b"><span class="award-dot"></span> Param Vir Chakra</div>
+            <span class="posthumous-tag">Posthumous</span>
+            <h3 class="card-name">Major Shaitan Singh</h3>
+            <p class="card-rank">13 Kumaon · Rezang La, Ladakh · Nov 18, 1962</p>
+            <p class="card-tagline">Led 123 soldiers with WWII-era rifles against 3000 Chinese with automatic weapons at 18,000 ft.</p>
+            <span class="card-toggle">Read Full Story ›</span>
+            <div class="card-expanded-content">
+              <div class="expanded-section">
+                <p class="expanded-label">The Last Stand</p>
+                <p class="expanded-text">114 of 123 died at their posts. The Chinese suffered over 1000 casualties. When Rezang La was revisited, dead Jawans were found in their trenches still holding their weapons — every single man with several bullet wounds.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-dot center-col"><div class="dot-inner"></div></div>
+        <div class="right-col"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ERA 1965 -->
+  <div class="era-block" data-era="1965">
+    <div class="era-label fade-up"><span class="era-pill">Indo-Pakistani War · 1965</span></div>
+    <div class="hero-cards">
+      <div class="hero-entry right-align fade-up">
+        <div class="left-col">
+          <div class="hero-card award-pvc" onclick="toggleCard(this)">
+            <div class="card-award-badge pvc-b"><span class="award-dot"></span> Param Vir Chakra</div>
+            <span class="posthumous-tag">Posthumous</span>
+            <h3 class="card-name">CQMH Abdul Hamid</h3>
+            <p class="card-rank">4 Grenadiers · Asal Uttar, Punjab · Sep 10, 1965</p>
+            <p class="card-tagline">Destroyed multiple Pakistani Patton tanks with a recoilless gun mounted on a jeep.</p>
+            <span class="card-toggle">Read Full Story ›</span>
+            <div class="card-expanded-content">
+              <div class="expanded-section">
+                <p class="expanded-label">The Tank Graveyard</p>
+                <p class="expanded-text">Single-handedly destroyed several Pattons in confirmed accounts, maneuvering his jeep through sugarcane fields for cover, popping out to fire and disappearing again, halting the enemy's armored thrust to Amritsar.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-dot center-col"><div class="dot-inner"></div></div>
+        <div class="right-col"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ERA 1971 -->
+  <div class="era-block" data-era="1971">
+    <div class="era-label fade-up"><span class="era-pill">Liberation War · 1971</span></div>
+    <div class="hero-cards">
+      <div class="hero-entry right-align fade-up">
+        <div class="left-col">
+          <div class="hero-card award-pvc" onclick="toggleCard(this)">
+            <div class="card-award-badge pvc-b"><span class="award-dot"></span> Param Vir Chakra</div>
+            <span class="posthumous-tag">Posthumous</span><span class="unsung-tag">★ Only IAF PVC</span>
+            <h3 class="card-name">Flying Officer Nirmal Jit Singh Sekhon</h3>
+            <p class="card-rank">No. 18 Squadron IAF · Srinagar · Dec 14, 1971</p>
+            <p class="card-tagline">The only Indian Air Force officer to be awarded the PVC. Took off during an air raid and engaged 6 Pakistani Sabres alone.</p>
+            <span class="card-toggle">Read Full Story ›</span>
+            <div class="card-expanded-content">
+              <div class="expanded-section">
+                <p class="expanded-label">Dogfight over Srinagar</p>
+                <p class="expanded-text">Despite his airfield being under attack, Sekhon took off in his Folland Gnat. Outnumbered 1 to 6, he shot down two Sabres before his own aircraft was hit. His supreme sacrifice saved Srinagar from heavy bombardment.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-dot center-col"><div class="dot-inner"></div></div>
+        <div class="right-col"></div>
+      </div>
+      
+      <div class="hero-entry left-align fade-up">
+        <div class="right-col">
+          <div class="hero-card award-pvc" onclick="toggleCard(this)">
+            <div class="card-award-badge pvc-b"><span class="award-dot"></span> Param Vir Chakra</div>
+            <span class="posthumous-tag">Posthumous</span>
+            <h3 class="card-name">2nd Lt. Arun Khetarpal</h3>
+            <p class="card-rank">17 Poona Horse · Battle of Basantar · Dec 16, 1971</p>
+            <p class="card-tagline">The youngest recipient of the PVC (21 years old). Destroyed 4 enemy tanks before his own tank caught fire.</p>
+            <span class="card-toggle">Read Full Story ›</span>
+            <div class="card-expanded-content">
+              <div class="expanded-section">
+                <p class="expanded-label">The Supreme Sacrifice</p>
+                <p class="expanded-text">Ordered to abandon his burning tank ("Famagusta"), Khetarpal replied over the radio: "No Sir, I will not abandon my tank. My main gun is still working and I will get these bastards." He destroyed the final enemy tank before succumbing to a direct hit.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-dot center-col"><div class="dot-inner"></div></div>
+        <div class="left-col"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ERA 1987 -->
+  <div class="era-block" data-era="1987">
+    <div class="era-label fade-up"><span class="era-pill">Siachen / IPKF · 1987</span></div>
+    <div class="hero-cards">
+      <div class="hero-entry right-align fade-up">
+        <div class="left-col">
+          <div class="hero-card award-pvc" onclick="toggleCard(this)">
+            <div class="card-award-badge pvc-b"><span class="award-dot"></span> Param Vir Chakra</div>
+            <h3 class="card-name">Naib Subedar Bana Singh</h3>
+            <p class="card-rank">8 JAK LI · Siachen Glacier · June 26, 1987</p>
+            <p class="card-tagline">Scaled a 457m high vertical ice wall under heavy blizzard and cleared the impenetrable 'Quaid Post' at 21,000 feet.</p>
+            <span class="card-toggle">Read Full Story ›</span>
+            <div class="card-expanded-content">
+              <div class="expanded-section">
+                <p class="expanded-label">Operation Rajiv</p>
+                <p class="expanded-text">Leading a team of five, Bana Singh approached the fortress-like Quaid Post (later renamed Bana Post) from an unexpected, near-vertical ice wall. Using grenades and bayonets in close-quarter combat at sub-zero temperatures, they cleared the post of Pakistani defenders.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-dot center-col"><div class="dot-inner"></div></div>
+        <div class="right-col"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ERA 1999 -->
+  <div class="era-block" data-era="1999">
+    <div class="era-label fade-up"><span class="era-pill">Kargil War · 1999</span></div>
+    <div class="hero-cards">
+      <div class="hero-entry right-align fade-up">
+        <div class="left-col">
+          <div class="hero-card award-pvc" onclick="toggleCard(this)">
+            <div class="card-award-badge pvc-b"><span class="award-dot"></span> Param Vir Chakra</div>
+            <span class="posthumous-tag">Posthumous</span>
+            <h3 class="card-name">Capt. Vikram Batra</h3>
+            <p class="card-rank">13 JAK RIF · Point 5140 & Point 4875 · July 7, 1999</p>
+            <p class="card-tagline">"Yeh Dil Maange More!" — He captured crucial peaks and sacrificed himself to save a fellow officer.</p>
+            <span class="card-toggle">Read Full Story ›</span>
+            <div class="card-expanded-content">
+              <div class="expanded-section">
+                <p class="expanded-label">The Legend</p>
+                <p class="expanded-text">Known by the code name 'Sher Shah', Capt Batra led successful assaults in Dras and Mushkoh valleys. While rescuing an injured soldier at Pt 4875, he pushed his subedar aside, saying "You have a family and children," before taking a fatal bullet to the chest.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-dot center-col"><div class="dot-inner"></div></div>
+        <div class="right-col"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ERA PEACETIME -->
+  <div class="era-block" data-era="peace">
+    <div class="era-label fade-up"><span class="era-pill">Peacetime & Recent Era (2020 - 2026)</span></div>
+    <div class="hero-cards">
+      <div class="hero-entry left-align fade-up">
+        <div class="right-col">
+          <div class="hero-card award-mvc" onclick="toggleCard(this)">
+            <div class="card-award-badge mvc-b"><span class="award-dot"></span> Maha Vir Chakra</div>
+            <span class="posthumous-tag">Posthumous</span>
+            <h3 class="card-name">Colonel Bikumalla Santosh Babu</h3>
+            <p class="card-rank">16 Bihar Regiment · Galwan Valley · June 15, 2020</p>
+            <p class="card-tagline">Led his troops with exemplary leadership during intense hand-to-hand combat to defend Indian territory.</p>
+            <span class="card-toggle">Read Full Story ›</span>
+            <div class="card-expanded-content">
+              <div class="expanded-section">
+                <p class="expanded-label">The Galwan Clash</p>
+                <p class="expanded-text">During the border skirmish in 2020, Col. Santosh Babu stood his ground against a numerically superior adversary. His astute professionalism and supreme sacrifice under treacherous conditions set a high standard of bravery.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-dot center-col"><div class="dot-inner"></div></div>
+        <div class="left-col"></div>
+      </div>
+      
+      <div class="hero-entry right-align fade-up">
+        <div class="left-col">
+          <div class="hero-card award-ac" onclick="toggleCard(this)">
+            <div class="card-award-badge ac-b"><span class="award-dot"></span> Ashoka Chakra</div>
+            <h3 class="card-name">Group Capt. Shubhanshu Shukla</h3>
+            <p class="card-rank">Indian Air Force / ISRO · ISS · 2026</p>
+            <p class="card-tagline">Conferred the highest peacetime award for his exemplary courage and mission execution during the Axiom-4 space mission.</p>
+            <span class="card-toggle">Read Full Story ›</span>
+            <div class="card-expanded-content">
+              <div class="expanded-section">
+                <p class="expanded-label">Space Exploration</p>
+                <p class="expanded-text">Following in the footsteps of Rakesh Sharma (1984), Gp Capt Shukla became the first Indian astronaut to visit the International Space Station, displaying pre-eminent valour in the high-stakes environment of aerospace operations.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-dot center-col"><div class="dot-inner"></div></div>
+        <div class="right-col"></div>
+      </div>
+
+      <div class="hero-entry left-align fade-up">
+        <div class="right-col">
+          <div class="hero-card award-ac" onclick="toggleCard(this)">
+            <div class="card-award-badge ac-b"><span class="award-dot"></span> Sena Medal (Gallantry)</div>
+            <span class="unsung-tag">★ First Female Officer</span>
+            <h3 class="card-name">Lt. Col. Mitali Madhumita</h3>
+            <p class="card-rank">Army Education Corps · Kabul, Afghanistan · 2010</p>
+            <p class="card-tagline">The first female officer to receive a gallantry award. Saved at least 19 lives during a terrorist attack.</p>
+            <span class="card-toggle">Read Full Story ›</span>
+            <div class="card-expanded-content">
+              <div class="expanded-section">
+                <p class="expanded-label">Kabul Embassy Attack</p>
+                <p class="expanded-text">When terrorists attacked an Indian guest house in Kabul, Lt. Col. Madhumita ran unarmed into the burning debris to pull out trapped civilians and soldiers, displaying raw courage away from the battlefield.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-dot center-col"><div class="dot-inner"></div></div>
+        <div class="left-col"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- INFOGRAPHIC CHART SECTION -->
+<section class="chart-section fade-up">
+  <div class="section-header" style="margin-bottom:40px;">
+    <p class="section-eyebrow">Data & Analysis</p>
+    <h2 class="section-title">Infographic Chart</h2>
+    <div class="section-divider"></div>
+  </div>
+  
+  <div class="chart-container">
+    <div class="chart-row">
+      <div class="chart-label">Kashmir War (1947)</div>
+      <div class="chart-bar-container">
+        <div class="chart-bar bar-pvc" data-width="23%">5 PVC</div>
+      </div>
+    </div>
+    <div class="chart-row">
+      <div class="chart-label">Congo Mission (1961)</div>
+      <div class="chart-bar-container">
+        <div class="chart-bar bar-pvc" data-width="5%">1 PVC</div>
+      </div>
+    </div>
+    <div class="chart-row">
+      <div class="chart-label">Sino-Indian (1962)</div>
+      <div class="chart-bar-container">
+        <div class="chart-bar bar-pvc" data-width="14%">3 PVC</div>
+      </div>
+    </div>
+    <div class="chart-row">
+      <div class="chart-label">Indo-Pak (1965)</div>
+      <div class="chart-bar-container">
+        <div class="chart-bar bar-pvc" data-width="9%">2 PVC</div>
+      </div>
+    </div>
+    <div class="chart-row">
+      <div class="chart-label">Liberation War (1971)</div>
+      <div class="chart-bar-container">
+        <div class="chart-bar bar-pvc" data-width="19%">4 PVC</div>
+      </div>
+    </div>
+    <div class="chart-row">
+      <div class="chart-label">Siachen/IPKF (1987)</div>
+      <div class="chart-bar-container">
+        <div class="chart-bar bar-pvc" data-width="9%">2 PVC</div>
+      </div>
+    </div>
+    <div class="chart-row">
+      <div class="chart-label">Kargil War (1999)</div>
+      <div class="chart-bar-container">
+        <div class="chart-bar bar-pvc" data-width="19%">4 PVC</div>
+      </div>
+    </div>
+    <div class="chart-row" style="margin-top:20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top:20px;">
+      <div class="chart-label" style="color:var(--gold);">Ashoka Chakra (Total)</div>
+      <div class="chart-bar-container">
+        <div class="chart-bar bar-ac" data-width="100%">87 Total (Peacetime)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSIGHTS -->
+<section class="insight-band fade-up">
+  <div class="insight-inner">
+    <div class="section-header" style="margin-bottom:40px;">
+      <p class="section-eyebrow">Unsung Records</p>
+      <h2 class="section-title">Insights & Unheard Events</h2>
+    </div>
+    <div class="insight-grid">
+      <div class="insight-card">
+        <h3 class="insight-title">The Toll of Valor</h3>
+        <p class="insight-body">Out of the 21 Param Vir Chakras awarded since independence, 14 were awarded posthumously. Similarly, a vast majority of Ashoka Chakras are posthumous, highlighting that the ultimate price is often paid for the highest honor.</p>
+      </div>
+      <div class="insight-card">
+        <h3 class="insight-title">The Medical Corps</h3>
+        <p class="insight-body">Bravery is not limited to combat units. Medical officers like Major Laishram Jyotin Singh (Ashoka Chakra) have laid down their lives fighting terrorists to protect unarmed staff and patients, displaying immense courage.</p>
+      </div>
+      <div class="insight-card">
+        <h3 class="insight-title">The Designer's Grief</h3>
+        <p class="insight-body">Savitri Khanolkar, who designed the Param Vir Chakra, drew inspiration from the sacrifice of Rishi Dadhichi. Tragically, the first-ever PVC she designed went to her own son-in-law, Major Somnath Sharma.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-chakra">
+    <svg viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="80" cy="80" r="74" stroke="#D4A017" stroke-width="1.5"/>
+      <g stroke="#D4A017" stroke-width="1.2">
+        <line x1="80" y1="6" x2="80" y2="154"/>
+        <line x1="6" y1="80" x2="154" y2="80"/>
+      </g>
+    </svg>
+  </div>
+  <p class="footer-quote">"Only best of friends and worst of enemies visit us."</p>
+  <p class="footer-text">Veeron Ki Gatha — A tribute to the Indian Armed Forces.<br>Data curated for informational purposes. © 2026</p>
+</footer>
+
+<script>
+  // Toggle card expansion
+  function toggleCard(card) {
+    card.classList.toggle('expanded');
+    const toggleText = card.querySelector('.card-toggle');
+    if (card.classList.contains('expanded')) {
+      toggleText.innerHTML = 'Show Less ‹';
+    } else {
+      toggleText.innerHTML = 'Read Full Story ›';
+    }
+  }
+
+  // Era Filtering
+  function filterEra(era, btnElement) {
+    document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+    btnElement.classList.add('active');
+
+    document.querySelectorAll('.era-block').forEach(block => {
+      if (era === 'all' || block.getAttribute('data-era') === era) {
+        block.style.display = 'block';
+        setTimeout(() => block.style.opacity = '1', 50);
+      } else {
+        block.style.display = 'none';
+        block.style.opacity = '0';
+      }
+    });
+  }
+
+  // Scroll Animations & Chart Bars
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        
+        // If it's the chart section, animate bars
+        if (entry.target.classList.contains('chart-section')) {
+          const bars = entry.target.querySelectorAll('.chart-bar');
+          bars.forEach(bar => {
+            bar.style.width = bar.getAttribute('data-width');
+          });
+        }
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-up').forEach((el) => observer.observe(el));
+</script>
+</body>
+</html>
