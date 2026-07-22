@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shrikanth Bandi — Research Scholar · Sanskrit × AI</title>
-<meta name="description" content="Shrikanth Bandi — Research Scholar bridging Sanskrit and Artificial Intelligence. IIT PhD aspirant, NLP researcher, and web developer.">
+<title>Shrikanth Bandi — Sanskrit Computational Linguistics · Vīraśaiva-Lingāyata NLP</title>
+<meta name="description" content="Shrikanth Bandi — Research Scholar in Sanskrit Computational Linguistics, NLP for Classical Indian Languages, and Vīraśaiva-Lingāyata Studies. IIT PhD Applicant.">
 <meta name="theme-color" content="#04040c">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -80,7 +80,7 @@ body{background:var(--bg);color:var(--t1);font-family:'Kanit',sans-serif;font-we
 }
 .brand:hover .brand-mark{border-color:var(--violet);background:rgba(157,113,248,0.18);box-shadow:0 0 18px rgba(157,113,248,0.35)}
 .brand-txt{font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.18em;color:var(--t3);text-transform:uppercase}
-.nav-links{display:flex;gap:clamp(14px,2.5vw,38px);list-style:none}
+.nav-links{display:flex;gap:clamp(14px,2.5vw,32px);list-style:none}
 .nav-links a{
   font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.22em;
   color:var(--t3);text-decoration:none;text-transform:uppercase;
@@ -116,8 +116,6 @@ body{background:var(--bg);color:var(--t1);font-family:'Kanit',sans-serif;font-we
   padding:calc(var(--nav-h) + 30px) clamp(20px,5vw,80px) 70px;
   position:relative;overflow:hidden;text-align:center;
 }
-
-/* Perspective grid */
 .hero-grid{
   position:absolute;inset:0;pointer-events:none;z-index:0;
   background-image:
@@ -127,37 +125,30 @@ body{background:var(--bg);color:var(--t1);font-family:'Kanit',sans-serif;font-we
   mask-image:radial-gradient(ellipse 75% 75% at 50% 50%,black 20%,transparent 75%);
   transform:perspective(700px) rotateX(18deg);transform-origin:50% 0;
 }
-
-/* Floating CSS orbs */
 .orb{position:absolute;border-radius:50%;pointer-events:none;z-index:0;filter:blur(90px)}
 .o1{width:clamp(260px,36vw,560px);height:clamp(260px,36vw,560px);top:-8%;right:-4%;background:radial-gradient(circle,rgba(157,113,248,0.18) 0%,transparent 70%);animation:ofloat 18s ease-in-out infinite}
 .o2{width:clamp(160px,24vw,360px);height:clamp(160px,24vw,360px);bottom:6%;left:-5%;background:radial-gradient(circle,rgba(56,217,245,0.11) 0%,transparent 70%);animation:ofloat 22s ease-in-out infinite;animation-delay:-9s}
 .o3{width:clamp(120px,16vw,260px);height:clamp(120px,16vw,260px);top:32%;left:28%;background:radial-gradient(circle,rgba(201,168,76,0.09) 0%,transparent 70%);animation:ofloat 26s ease-in-out infinite;animation-delay:-15s}
 @keyframes ofloat{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-26px) scale(1.04)}}
-
-/* Hero content */
-.hero-content{position:relative;z-index:2;max-width:900px;width:100%}
-
-/* Badge */
+.hero-content{position:relative;z-index:2;max-width:960px;width:100%}
 .badge{
-  display:inline-flex;align-items:center;gap:8px;
-  padding:6px 18px;border-radius:100px;
-  background:rgba(157,113,248,0.07);border:1px solid rgba(157,113,248,0.22);
-  font-family:'Space Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--violet);margin-bottom:clamp(20px,3vh,36px);
+  display:inline-flex;align-items:center;gap:10px;
+  padding:8px 22px;border-radius:100px;
+  background:rgba(157,113,248,0.14);border:1.5px solid rgba(157,113,248,0.45);
+  box-shadow:0 0 20px rgba(157,113,248,0.25);
+  font-family:'Space Mono',monospace;font-size:clamp(11px,1.2vw,14px);font-weight:700;
+  letter-spacing:.14em;text-transform:uppercase;
+  color:#e0d0ff;margin-bottom:clamp(20px,3vh,36px);
 }
 .badge-dot{
-  width:6px;height:6px;border-radius:50%;background:var(--violet);
-  box-shadow:0 0 8px var(--violet);
+  width:8px;height:8px;border-radius:50%;background:#c084fc;
+  box-shadow:0 0 12px #c084fc;
   animation:pdot 2.2s ease-in-out infinite;
 }
-@keyframes pdot{0%,100%{box-shadow:0 0 6px var(--violet)}50%{box-shadow:0 0 18px var(--violet),0 0 36px rgba(157,113,248,.45)}}
-
-/* ── BIG NAME — Cormorant Garamond, large, premium ── */
+@keyframes pdot{0%,100%{box-shadow:0 0 6px #c084fc}50%{box-shadow:0 0 18px #c084fc,0 0 36px rgba(192,132,252,.6)}}
 .hero-name{
   font-family:'Cormorant Garamond',serif;
-  line-height:0.9;
-  letter-spacing:-0.01em;
+  line-height:0.9;letter-spacing:-0.01em;
   position:relative;z-index:2;
   margin-bottom:clamp(10px,1.8vh,20px);
 }
@@ -170,31 +161,25 @@ body{background:var(--bg);color:var(--t1);font-family:'Kanit',sans-serif;font-we
 }
 .hero-name .n-divider{
   display:block;
-  width:clamp(50px,8vw,110px);
-  height:1px;
+  width:clamp(50px,8vw,110px);height:1px;
   background:linear-gradient(90deg,transparent,var(--violet),var(--cyan),transparent);
   margin:clamp(8px,1.2vh,16px) auto;
 }
 .hero-name .n-last{
   display:block;
   font-size:clamp(22px,4.5vw,60px);
-  font-weight:600;font-style:normal;
-  letter-spacing:0.38em;
-  text-transform:uppercase;
+  font-weight:600;font-style:normal;letter-spacing:0.38em;text-transform:uppercase;
   background:linear-gradient(135deg,var(--gold) 0%,var(--gold2) 55%,var(--cyan) 100%);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
 }
-
-/* Hero desc */
 .hero-desc{
-  margin-top:clamp(16px,2.5vh,28px);
-  max-width:560px;margin-left:auto;margin-right:auto;
+  margin-top:clamp(18px,2.5vh,28px);
+  max-width:640px;margin-left:auto;margin-right:auto;
   font-family:'Cormorant Garamond',serif;
-  font-size:clamp(15px,1.8vw,21px);
-  font-style:italic;font-weight:300;color:var(--t2);line-height:1.65;
+  font-size:clamp(16px,2vw,24px);
+  font-style:italic;font-weight:400;color:rgba(240,237,232,0.88);line-height:1.65;
+  text-shadow:0 1px 4px rgba(0,0,0,0.8);
 }
-
-/* Stats — pill row */
 .hero-stats{
   display:flex;flex-wrap:wrap;justify-content:center;
   gap:10px;margin-top:clamp(22px,3.5vh,40px);
@@ -212,9 +197,7 @@ body{background:var(--bg);color:var(--t1);font-family:'Kanit',sans-serif;font-we
   background:linear-gradient(135deg,var(--gold),var(--gold2));
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
 }
-.stat-k{font-family:'Space Mono',monospace;font-size:clamp(6px,0.75vw,8px);letter-spacing:.18em;color:var(--t3);text-transform:uppercase;margin-top:3px;text-align:center}
-
-/* CTAs */
+.stat-k{font-family:'Space Mono',monospace;font-size:clamp(7px,0.85vw,10px);letter-spacing:.18em;color:rgba(240,237,232,0.75);text-transform:uppercase;margin-top:4px;text-align:center}
 .hero-ctas{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:clamp(20px,3.2vh,38px)}
 .btn-p{
   display:inline-flex;align-items:center;gap:8px;
@@ -237,8 +220,6 @@ body{background:var(--bg);color:var(--t1);font-family:'Kanit',sans-serif;font-we
   transition:background .3s,color .3s,border-color .3s;
 }
 .btn-g:hover{background:var(--glass2);color:var(--t1);border-color:var(--border2)}
-
-/* Tech pills */
 .pill-row{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:clamp(18px,2.8vh,32px)}
 .pill{
   display:flex;align-items:center;gap:6px;
@@ -249,8 +230,6 @@ body{background:var(--bg);color:var(--t1);font-family:'Kanit',sans-serif;font-we
 }
 .pill:hover{background:var(--glass2);color:var(--t1);border-color:var(--border2)}
 .pill-dot{width:5px;height:5px;border-radius:50%;flex-shrink:0}
-
-/* Scroll cue */
 .scroll-cue{
   position:absolute;bottom:28px;left:50%;transform:translateX(-50%);
   display:flex;align-items:center;gap:10px;z-index:2;
@@ -303,17 +282,52 @@ body{background:var(--bg);color:var(--t1);font-family:'Kanit',sans-serif;font-we
 .m-sub{font-family:'Space Mono',monospace;font-size:clamp(7px,.75vw,8px);color:var(--t3);letter-spacing:.06em;text-align:center}
 
 /* ═══════════════════════════════
-   ABOUT — clean glass cards
+   RESEARCH STATEMENT
 ═══════════════════════════════ */
-.about-sec{background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%)}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.5vw,22px);max-width:1100px}
-.a-card{
-  background:var(--glass);
-  backdrop-filter:blur(22px) saturate(160%);
-  border:1px solid var(--border);
-  border-radius:28px;
-  padding:clamp(24px,3vw,40px);
+.rs-sec{background:linear-gradient(180deg,var(--bg) 0%,var(--bg2) 100%)}
+.rs-card{
+  max-width:900px;
+  background:var(--glass);backdrop-filter:blur(22px);
+  border:1px solid rgba(201,168,76,0.2);border-radius:32px;
+  padding:clamp(32px,5vw,64px);
   position:relative;overflow:hidden;
+  box-shadow:0 4px 40px rgba(0,0,0,0.3),0 0 0 1px rgba(201,168,76,0.06);
+}
+.rs-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,transparent,var(--gold),var(--cyan),transparent);
+}
+.rs-opener{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(20px,3vw,34px);font-weight:300;font-style:italic;
+  color:var(--t1);line-height:1.5;margin-bottom:clamp(20px,3vh,32px);
+}
+.rs-opener em{
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  font-style:normal;font-weight:600;
+}
+.rs-body{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(15px,1.6vw,20px);color:var(--t2);line-height:1.85;
+}
+.rs-punchline{
+  margin-top:clamp(20px,3vh,30px);
+  font-family:'Kanit',sans-serif;font-weight:700;
+  font-size:clamp(14px,1.8vw,22px);text-transform:uppercase;letter-spacing:.08em;
+  background:linear-gradient(135deg,var(--violet),var(--cyan));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+
+/* ═══════════════════════════════
+   RESEARCH FOCUS — 3 PILLARS
+═══════════════════════════════ */
+.about-sec{background:var(--bg2)}
+.about-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.5vw,22px);max-width:1200px}
+.a-card{
+  background:var(--glass);backdrop-filter:blur(22px) saturate(160%);
+  border:1px solid var(--border);border-radius:28px;
+  padding:clamp(24px,3vw,40px);position:relative;overflow:hidden;
   box-shadow:0 4px 32px rgba(0,0,0,0.25);
   transition:border-color .4s,box-shadow .4s,transform .5s cubic-bezier(.25,.1,.25,1);
 }
@@ -330,45 +344,17 @@ body{background:var(--bg);color:var(--t1);font-family:'Kanit',sans-serif;font-we
 .a-lbl{font-family:'Space Mono',monospace;font-size:8px;letter-spacing:.24em;text-transform:uppercase;color:var(--violet);opacity:.8;margin-bottom:7px;position:relative;z-index:1}
 .a-h{font-weight:700;font-size:clamp(17px,2vw,24px);color:var(--t1);line-height:1.2;margin-bottom:11px;position:relative;z-index:1}
 .a-txt{font-family:'Cormorant Garamond',serif;font-size:clamp(14px,1.5vw,18px);color:var(--t2);line-height:1.78;position:relative;z-index:1}
-
-/* Skill bars */
-.sbar-wrap{margin-top:18px;display:flex;flex-direction:column;gap:12px;position:relative;z-index:1}
-.sbar{display:flex;flex-direction:column;gap:5px}
-.sbar-hd{display:flex;justify-content:space-between;font-size:11px;color:var(--t2)}
-.sbar-track{height:3px;background:var(--border);border-radius:99px;overflow:hidden}
-.sbar-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--violet),var(--cyan));transform:scaleX(0);transform-origin:left}
-
-/* ═══════════════════════════════
-   3D SPHERE SECTION
-═══════════════════════════════ */
-.scene-sec{
-  background:var(--bg3);
-  padding:clamp(60px,10vh,120px) clamp(20px,5vw,80px);
-  display:flex;align-items:center;gap:clamp(24px,5vw,80px);
-  flex-wrap:wrap;min-height:70vh;
+.a-moat{
+  margin-top:14px;padding:10px 14px;border-radius:12px;
+  background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.18);
+  font-family:'Space Mono',monospace;font-size:8px;letter-spacing:.1em;color:var(--gold);
+  position:relative;z-index:1;
 }
-#globe-wrap{
-  width:clamp(280px,40vw,580px);height:clamp(280px,40vw,580px);
-  flex-shrink:0;border-radius:50%;overflow:hidden;
-  box-shadow:0 0 0 1px rgba(157,113,248,0.15),0 0 80px rgba(157,113,248,0.1);
-}
-#globe-canvas{width:100%!important;height:100%!important;display:block;border-radius:50%}
-.scene-info{flex:1;min-width:260px}
-.scene-quote{
-  font-family:'Cormorant Garamond',serif;font-style:italic;
-  font-size:clamp(22px,3.5vw,50px);font-weight:300;color:var(--t1);line-height:1.3;
-  margin-bottom:clamp(16px,2.5vh,28px);
-}
-.scene-quote span{
-  background:linear-gradient(135deg,var(--gold),var(--cyan));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
-}
-.scene-desc{font-size:clamp(13px,1.4vw,16px);color:var(--t2);line-height:1.7;max-width:460px}
 
 /* ═══════════════════════════════
    PROJECTS — STICKY STACK
 ═══════════════════════════════ */
-.proj-sec{background:var(--bg2)}
+.proj-sec{background:var(--bg)}
 .pstack{max-width:1000px;margin:0 auto}
 .pw{height:90vh;display:flex;align-items:flex-start}
 .proj-card{
@@ -415,7 +401,28 @@ body{background:var(--bg);color:var(--t1);font-family:'Kanit',sans-serif;font-we
 .ppanel-d{font-size:clamp(10px,1.1vw,13px);color:var(--t2);line-height:1.6}
 
 /* ═══════════════════════════════
-   EXPERIENCE TIMELINE
+   SCHOLARLY OUTPUTS
+═══════════════════════════════ */
+.out-sec{background:var(--bg2)}
+.out-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px;max-width:1100px}
+.out-card{
+  background:var(--glass);backdrop-filter:blur(16px);
+  border:1px solid var(--border);border-radius:24px;
+  padding:clamp(20px,3vw,32px);position:relative;overflow:hidden;
+  box-shadow:0 4px 24px rgba(0,0,0,0.22);
+  transition:border-color .4s,transform .5s cubic-bezier(.25,.1,.25,1),box-shadow .4s;
+}
+.out-card::before{
+  content:'';position:absolute;top:0;left:0;bottom:0;width:2px;
+  background:linear-gradient(to bottom,var(--gold),var(--violet));border-radius:0 0 0 24px;
+}
+.out-card:hover{border-color:rgba(201,168,76,.28);transform:translateX(6px) translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,.35)}
+.out-type{font-family:'Space Mono',monospace;font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:8px}
+.out-title{font-family:'Kanit',sans-serif;font-weight:700;font-size:clamp(14px,1.7vw,20px);color:var(--t1);line-height:1.2;margin-bottom:10px}
+.out-desc{font-family:'Cormorant Garamond',serif;font-size:clamp(13px,1.4vw,17px);color:var(--t2);line-height:1.7}
+
+/* ═══════════════════════════════
+   EDUCATION & CREDENTIALS
 ═══════════════════════════════ */
 .exp-sec{background:var(--bg)}
 .tl{position:relative;padding-left:40px;max-width:800px;display:flex;flex-direction:column;gap:18px}
@@ -446,7 +453,7 @@ body{background:var(--bg);color:var(--t1);font-family:'Kanit',sans-serif;font-we
 .tl-desc{font-family:'Cormorant Garamond',serif;font-size:clamp(12px,1.4vw,16px);color:var(--t3);line-height:1.65;border-top:1px solid var(--border);padding-top:9px;margin-top:9px}
 
 /* ═══════════════════════════════
-   SKILLS — smooth rounded
+   SKILLS
 ═══════════════════════════════ */
 .skill-sec{background:var(--bg2)}
 .sgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px;max-width:1100px}
@@ -473,6 +480,150 @@ body{background:var(--bg);color:var(--t1);font-family:'Kanit',sans-serif;font-we
 .s-lvl{display:flex;gap:5px;margin-top:12px;position:relative;z-index:1}
 .lvl-p{height:3px;flex:1;border-radius:99px;background:var(--border)}
 .lvl-p.on{background:linear-gradient(90deg,var(--violet),var(--cyan))}
+
+/* ═══════════════════════════════
+   INSTITUTIONAL CONTEXT
+═══════════════════════════════ */
+.inst-sec{background:var(--bg)}
+.inst-card{
+  max-width:1000px;
+  background:var(--glass);backdrop-filter:blur(24px);
+  border:1px solid rgba(201,168,76,0.3);border-radius:32px;
+  padding:clamp(32px,5vw,60px);position:relative;overflow:hidden;
+  box-shadow:0 4px 40px rgba(0,0,0,0.3),0 0 60px rgba(201,168,76,0.04);
+}
+.inst-card::before{
+  content:'';position:absolute;inset:0;border-radius:inherit;
+  background:linear-gradient(135deg,rgba(201,168,76,0.05) 0%,transparent 50%);
+  pointer-events:none;
+}
+.inst-title{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:clamp(22px,3.5vw,42px);font-weight:300;color:var(--t1);
+  line-height:1.3;margin-bottom:clamp(16px,2.5vh,26px);position:relative;z-index:1;
+}
+.inst-title strong{
+  background:linear-gradient(135deg,var(--gold),var(--gold2));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  font-weight:600;font-style:normal;
+}
+.inst-body{
+  font-family:'Cormorant Garamond',serif;font-size:clamp(15px,1.6vw,20px);
+  color:var(--t2);line-height:1.85;margin-bottom:clamp(20px,3vh,32px);position:relative;z-index:1;
+}
+.inst-bullets{display:grid;grid-template-columns:1fr 1fr;gap:12px;position:relative;z-index:1}
+.inst-bullet{
+  display:flex;gap:12px;align-items:flex-start;
+  padding:14px 18px;border-radius:16px;
+  background:rgba(201,168,76,0.05);border:1px solid rgba(201,168,76,0.12);
+}
+.inst-bullet-icon{font-size:20px;flex-shrink:0;margin-top:2px}
+.inst-bullet-t{font-family:'Kanit',sans-serif;font-weight:600;font-size:clamp(12px,1.4vw,16px);color:var(--t1);margin-bottom:3px}
+.inst-bullet-d{font-size:clamp(10px,1.1vw,13px);color:var(--t2);line-height:1.5}
+.inst-moat{
+  margin-top:clamp(20px,3vh,28px);padding:14px 20px;border-radius:16px;
+  background:rgba(157,113,248,0.07);border:1px solid rgba(157,113,248,0.18);
+  font-family:'Cormorant Garamond',serif;font-size:clamp(14px,1.5vw,18px);
+  font-style:italic;color:var(--t1);line-height:1.6;position:relative;z-index:1;
+}
+
+/* ═══════════════════════════════
+   CIVIC WORK
+═══════════════════════════════ */
+.civic-sec{background:var(--bg2)}
+.civic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;max-width:1100px}
+.civic-card{
+  background:var(--glass);backdrop-filter:blur(14px);
+  border:1px solid var(--border);border-radius:20px;
+  padding:clamp(18px,2.5vw,28px);
+  transition:border-color .4s,transform .4s cubic-bezier(.25,.1,.25,1);
+}
+.civic-card:hover{border-color:rgba(56,217,245,.22);transform:translateY(-5px)}
+.civic-icon{font-size:28px;margin-bottom:10px;display:block}
+.civic-name{font-family:'Kanit',sans-serif;font-weight:700;font-size:clamp(13px,1.6vw,17px);color:var(--t1);text-transform:uppercase;letter-spacing:.05em;margin-bottom:6px}
+.civic-desc{font-size:clamp(11px,1.2vw,13px);color:var(--t2);line-height:1.6}
+
+/* ═══════════════════════════════
+   SITE MOTTO
+═══════════════════════════════ */
+.site-motto{
+  margin-top:clamp(18px,2.8vh,30px);
+  margin-bottom:clamp(10px,1.5vh,18px);
+  display:flex;flex-direction:column;align-items:center;gap:8px;
+}
+.motto-skt{
+  font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3.2vw,38px);
+  font-style:italic;font-weight:600;
+  color:#fef08a;
+  text-shadow:0 0 25px rgba(250,204,21,0.35), 0 2px 4px rgba(0,0,0,0.9);
+  letter-spacing:.05em;line-height:1.2;
+}
+.motto-tr{
+  font-family:'Space Mono',monospace;font-size:clamp(10px,1.1vw,13px);
+  letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(240,237,232,0.85);
+  text-shadow:0 1px 3px rgba(0,0,0,0.9);
+}
+
+/* ═══════════════════════════════
+   UPANISHADIC QUOTE DIVIDER
+═══════════════════════════════ */
+.skt-break{
+  padding:clamp(40px,7vh,80px) clamp(20px,8vw,120px);
+  text-align:center;background:var(--bg3);position:relative;overflow:hidden;
+}
+.skt-break::before{
+  content:'';position:absolute;top:0;left:10%;right:10%;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(201,168,76,0.25),transparent);
+}
+.skt-break::after{
+  content:'';position:absolute;bottom:0;left:10%;right:10%;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(157,113,248,0.2),transparent);
+}
+.skt-verse{
+  font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:300;
+  font-size:clamp(20px,3vw,38px);color:var(--t1);line-height:1.4;
+  margin-bottom:clamp(10px,1.5vh,16px);
+}
+.skt-src{
+  font-family:'Space Mono',monospace;font-size:clamp(7px,.8vw,9px);
+  letter-spacing:.22em;text-transform:uppercase;color:var(--gold);opacity:.7;
+}
+.skt-meaning{
+  margin-top:7px;
+  font-family:'Cormorant Garamond',serif;font-size:clamp(13px,1.4vw,17px);
+  color:var(--t2);font-style:italic;line-height:1.5;
+}
+
+/* ═══════════════════════════════
+   CLOSING QUOTE
+═══════════════════════════════ */
+.quote-sec{
+  background:var(--bg);
+  padding:clamp(80px,14vh,160px) clamp(20px,8vw,120px);
+  text-align:center;position:relative;overflow:hidden;
+}
+.quote-sec::before{
+  content:'\201C';position:absolute;top:-20px;left:50%;transform:translateX(-50%);
+  font-family:'Cormorant Garamond',serif;font-size:clamp(200px,30vw,380px);
+  color:rgba(157,113,248,0.04);line-height:1;pointer-events:none;z-index:0;
+}
+.big-quote{
+  position:relative;z-index:1;
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:clamp(22px,4vw,56px);font-weight:300;
+  color:var(--t1);line-height:1.45;max-width:860px;margin:0 auto;
+}
+.big-quote em{
+  background:linear-gradient(135deg,var(--violet),var(--cyan));
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  font-style:normal;
+}
+.quote-attr{
+  margin-top:clamp(18px,3vh,28px);
+  font-family:'Space Mono',monospace;font-size:clamp(8px,.9vw,10px);
+  letter-spacing:.22em;text-transform:uppercase;color:var(--t3);
+}
 
 /* ═══════════════════════════════
    CONTACT
@@ -514,13 +665,23 @@ footer{
 }
 .foot-copy{font-family:'Space Mono',monospace;font-size:8px;letter-spacing:.1em;color:var(--t3);text-align:right}
 
+/* ─── SKILL BARS ─── */
+.sbar-wrap{margin-top:18px;display:flex;flex-direction:column;gap:12px;position:relative;z-index:1}
+.sbar{display:flex;flex-direction:column;gap:5px}
+.sbar-hd{display:flex;justify-content:space-between;font-size:11px;color:var(--t2)}
+.sbar-track{height:3px;background:var(--border);border-radius:99px;overflow:hidden}
+.sbar-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--violet),var(--cyan));transform:scaleX(0);transform-origin:left}
+
 /* ─── RESPONSIVE ─── */
+@media(max-width:900px){
+  .about-grid{grid-template-columns:1fr}
+  .inst-bullets{grid-template-columns:1fr}
+}
 @media(max-width:720px){
-  .about-grid,.pbody{grid-template-columns:1fr}
+  .pbody{grid-template-columns:1fr}
   .nav-links{display:none}
-  .scene-sec{flex-direction:column}
-  #globe-wrap{width:min(88vw,380px);height:min(88vw,380px)}
   .sgrid{grid-template-columns:1fr}
+  .civic-grid{grid-template-columns:1fr}
   footer{flex-direction:column;text-align:center}
   .foot-copy{text-align:center}
 }
@@ -540,13 +701,14 @@ footer{
     <span class="brand-txt">Shrikanth Bandi</span>
   </a>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#research">Research</a></li>
-    <li><a href="#experience">Experience</a></li>
+    <li><a href="#statement">Research</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#outputs">Outputs</a></li>
     <li><a href="#skills">Skills</a></li>
+    <li><a href="#institution">Institution</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <a class="nav-cta" href="mailto:shrikanthdevaru@gmail.com">Let's Talk →</a>
+  <a class="nav-cta" href="mailto:shrikanth@[youremail]">Let's Talk →</a>
 </nav>
 
 <div class="page" id="top">
@@ -559,10 +721,9 @@ footer{
     <div class="orb o3" aria-hidden="true"></div>
 
     <div class="hero-content">
-
       <div class="badge" id="h-badge">
         <div class="badge-dot"></div>
-        Research Scholar · Sanskrit × Artificial Intelligence
+        Advaita Vedānta Scholar · Philosophy of Mind · Ancient &amp; Modern Consciousness
       </div>
 
       <h1 class="hero-name" id="h-name">
@@ -571,31 +732,39 @@ footer{
         <span class="n-last">Bandi</span>
       </h1>
 
+      <div class="site-motto" id="h-motto">
+        <span class="motto-skt">आनो भद्राः क्रतवो यन्तु विश्वतः</span>
+        <span class="motto-tr">Let noble thoughts come from every direction — Ṛgveda 1.89.1</span>
+      </div>
+
       <p class="hero-desc" id="h-desc">
-        Bridging millennia of Vedic wisdom with modern machine intelligence —
-        NLP, computational linguistics, and AI-driven Sanskrit scholarship.
-        Aspiring IIT PhD candidate.
+        At the root, I am a Vedāntin. I study consciousness —
+        what the Upaniṣads called <em>Cit</em>, what Advaita
+        calls the only thing that cannot be doubted.
+        Modern philosophy of mind is still circling what
+        Śaṅkarācārya said clearly, over a thousand years ago.
+        My work is to bring those two conversations together.
       </p>
 
       <div class="hero-stats" id="h-stats">
-        <div class="stat"><div class="stat-v" id="c1">0+</div><div class="stat-k">Research Areas</div></div>
-        <div class="stat"><div class="stat-v" id="c2">0+</div><div class="stat-k">Projects Built</div></div>
-        <div class="stat"><div class="stat-v" id="c3">0+</div><div class="stat-k">Technical Skills</div></div>
-        <div class="stat"><div class="stat-v">IIT</div><div class="stat-k">PhD Aspirant</div></div>
+        <div class="stat"><div class="stat-v">MA</div><div class="stat-k">Advaita Vedānta · BHU</div></div>
+        <div class="stat"><div class="stat-v">5</div><div class="stat-k">Years Gurukula</div></div>
+        <div class="stat"><div class="stat-v">NET</div><div class="stat-k">UGC-NET Qualified</div></div>
+        <div class="stat"><div class="stat-v">Cit</div><div class="stat-k">Consciousness · PhD Focus</div></div>
       </div>
 
       <div class="hero-ctas" id="h-ctas">
-        <a class="btn-p" href="#research">View Research ↗</a>
-        <a class="btn-g" href="mailto:shrikanthdevaru@gmail.com">Get in Touch</a>
+        <a class="btn-p" href="#statement">Read Research Statement ↗</a>
+        <a class="btn-g" href="#projects">View Projects</a>
       </div>
 
       <div class="pill-row" id="h-pills">
-        <div class="pill"><div class="pill-dot" style="background:var(--violet)"></div>Sanskrit NLP</div>
-        <div class="pill"><div class="pill-dot" style="background:var(--cyan)"></div>Machine Learning</div>
-        <div class="pill"><div class="pill-dot" style="background:var(--gold)"></div>Computational Linguistics</div>
-        <div class="pill"><div class="pill-dot" style="background:var(--rose)"></div>Vedic Studies</div>
-        <div class="pill"><div class="pill-dot" style="background:var(--green)"></div>Python / AI</div>
-        <div class="pill"><div class="pill-dot" style="background:var(--cyan)"></div>Web Development</div>
+        <div class="pill"><div class="pill-dot" style="background:var(--gold)"></div>Advaita Vedānta</div>
+        <div class="pill"><div class="pill-dot" style="background:var(--violet)"></div>Philosophy of Mind</div>
+        <div class="pill"><div class="pill-dot" style="background:var(--cyan)"></div>Consciousness Studies</div>
+        <div class="pill"><div class="pill-dot" style="background:var(--rose)"></div>Sphoṭa · Bhartṛhari</div>
+        <div class="pill"><div class="pill-dot" style="background:var(--green)"></div>Sanskrit Epistemology</div>
+        <div class="pill"><div class="pill-dot" style="background:var(--gold)"></div>Mīmāṃsā · Brahmasūtra</div>
       </div>
     </div>
 
@@ -611,66 +780,72 @@ footer{
     <div id="mr2" class="mrow"></div>
   </div>
 
-  <!-- ═══════ ABOUT ═══════ -->
-  <section class="section about-sec" id="about">
-    <div class="stag">Who I Am</div>
-    <h2 class="sec-h" id="about-h">About<br>Me</h2>
+  <!-- ═══════ RESEARCH STATEMENT ═══════ -->
+  <section class="section rs-sec" id="statement">
+    <div class="stag">Research Identity</div>
+    <h2 class="sec-h">Vedānta<br>&amp; Mind</h2>
+    <div class="rs-card">
+      <p class="rs-opener">
+        Advaita Vedānta is not a religious system. It is the most rigorous <em>philosophy of consciousness</em> ever written. The question it asks — what is the nature of the witness, the knower, pure awareness — is the same question that David Chalmers calls the hard problem of consciousness. One tradition is 3,000 years old. The other is thirty.
+      </p>
+      <p class="rs-body">
+        I am a Sanskrit scholar and Vedāntin first. Computation came later, as a method — a way to make these philosophical systems formally accessible, analyzable, and legible to modern researchers who do not read Sanskrit. The Brahmasūtrabhāṣya, the Upaniṣads, Bhartṛhari’s Sphoṭa theory, the Vachana corpus — these are not data sources to me. They are philosophical arguments I have lived with.
+      </p>
+      <p class="rs-body" style="margin-top:16px">
+        What interests me most is the intersection: where Ādi Śaṅkarā’s account of Adhyāsa (superimposition) meets contemporary theories of perception and misrepresentation. Where the Antaḥkaraṇa model of mind — manas, buddhi, ahaṃkāra, citta — maps onto (and sometimes corrects) modern cognitive architecture. Where Śabda as pramāṇa gives language a epistemic weight that Western philosophy of language is only beginning to consider.
+      </p>
+      <div class="rs-punchline">प्रज्ञानं ब्रह्म — Consciousness itself is the ground of all inquiry.</div>
+    </div>
+  </section>
+
+  <!-- ═══════ RESEARCH FOCUS — 3 PILLARS ═══════ -->
+
+  <!-- UPANISHADIC QUOTE BREAK -->
+  <div class="skt-break">
+    <div class="skt-verse">उत्तिष्ठत जाग्रत प्राप्य वरान्निबोधत</div>
+    <div class="skt-src">Kaṭha Upaniṣad 1.3.14</div>
+    <div class="skt-meaning">Arise, awake — and do not stop until the goal is reached.</div>
+  </div>
+
+  <section class="section about-sec" id="focus">
+    <div class="stag">Philosophical Foundations</div>
+    <h2 class="sec-h">Ancient<br>Roots</h2>
     <div class="about-grid">
       <div class="a-card">
+        <span class="a-icon">🕯️</span>
+        <div class="a-lbl">Foundation</div>
+        <div class="a-h">Advaita Vedānta &amp; Consciousness</div>
+        <div class="a-txt">My core formation is in Advaita Vedānta — through five years of Gurukula study and an MA at Banaras Hindu University. The Brahmasūtra, the Upaniṣads, Ādi Śaṅkarā’s commentaries — I read these as philosophy, not scripture. Adhyāsa, Māyā, Cit, Turiya — these are not metaphors. They are a precise phenomenology of consciousness that modern cognitive science has not yet matched.</div>
+        <div class="a-moat">अहं ब्रह्मास्मि — Bṛhadāraṇyaka Upaniṣad · Mahāvākya</div>
+      </div>
+      <div class="a-card">
+        <span class="a-icon">🗣️</span>
+        <div class="a-lbl">Language &amp; Mind</div>
+        <div class="a-h">Sphoṭa Theory &amp; Philosophy of Language</div>
+        <div class="a-txt">Bhartṛhari’s Sphoṭa theory holds that language and consciousness are not separate — that the meaning of a sentence is grasped as a whole, in an instant of cognition called Pratibhā. Mīmāṃsā treats Śabda (sound/word) as an independent means of valid knowledge. These are radical philosophical positions. They also happen to be directly relevant to how large language models fail to understand meaning.</div>
+        <div class="a-moat">वाक्यं रसवदास्वाद्यं — Speech is the taste of all things. Bhartṛhari</div>
+      </div>
+      <div class="a-card">
         <span class="a-icon">🧠</span>
-        <div class="a-lbl">Research Focus</div>
-        <div class="a-h">Sanskrit Meets AI</div>
-        <div class="a-txt">I am a research scholar at the fascinating intersection of Sanskrit studies and Artificial Intelligence, applying modern NLP to ancient texts — making millennia of wisdom computationally accessible.</div>
-      </div>
-      <div class="a-card">
-        <span class="a-icon">🎯</span>
-        <div class="a-lbl">Current Goal</div>
-        <div class="a-h">IIT PhD Aspirant</div>
-        <div class="a-txt">Preparing for the IIT PhD entrance with a research proposal on computational Pāṇinian grammar and deep learning for ancient language processing.</div>
-        <div class="sbar-wrap" id="skill-bars">
-          <div class="sbar"><div class="sbar-hd"><span>Sanskrit Grammar</span><span>90%</span></div><div class="sbar-track"><div class="sbar-fill" data-w="0.90"></div></div></div>
-          <div class="sbar"><div class="sbar-hd"><span>Machine Learning</span><span>78%</span></div><div class="sbar-track"><div class="sbar-fill" data-w="0.78"></div></div></div>
-          <div class="sbar"><div class="sbar-hd"><span>NLP / Linguistics</span><span>82%</span></div><div class="sbar-track"><div class="sbar-fill" data-w="0.82"></div></div></div>
-          <div class="sbar"><div class="sbar-hd"><span>Web Development</span><span>75%</span></div><div class="sbar-track"><div class="sbar-fill" data-w="0.75"></div></div></div>
-        </div>
-      </div>
-      <div class="a-card">
-        <span class="a-icon">📜</span>
-        <div class="a-lbl">Education</div>
-        <div class="a-h">Academic Background</div>
-        <div class="a-txt">Deep academic grounding in Sanskrit studies combined with self-directed learning in CS and AI — building the bridge between classical Indian knowledge systems and modern computing.</div>
-      </div>
-      <div class="a-card">
-        <span class="a-icon">🌐</span>
-        <div class="a-lbl">Vision</div>
-        <div class="a-h">Making Sanskrit Accessible</div>
-        <div class="a-txt">Building AI tools to digitize, analyze, and make searchable the vast corpus of Sanskrit literature — from Vedic hymns to philosophical treatises — for the global research community.</div>
+        <div class="a-lbl">Modern Bridge</div>
+        <div class="a-h">Computation as Philosophical Method</div>
+        <div class="a-txt">The tools I build — RAG systems over the Brahmasūtrabhāṣya, semantic search for Sanskrit ślokas, LLM pipelines for Vachana poetry — are not ends in themselves. They are how I make these philosophical systems legible to researchers who do not read Sanskrit. The goal is always philosophical clarity. The method is sometimes computational.</div>
+        <div class="a-moat">चरैवेति चरैवेति — Keep moving. The path and the goal are not separate.</div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════ 3D SPHERE ═══════ -->
-  <section class="scene-sec" id="globe-sec">
-    <div id="globe-wrap" aria-hidden="true">
-      <canvas id="globe-canvas"></canvas>
-    </div>
-    <div class="scene-info">
-      <div class="stag">3D · Sanskrit Cosmos</div>
-      <p class="scene-quote">
-        <span>संस्कृत</span> — The perfect language,<br>now speaking to machines.
-      </p>
-      <p class="scene-desc">
-        Each glowing node represents a concept from Sanskrit NLP — sandhi rules, morphological tags, Vedic meter patterns, and grammatical categories from Pāṇini's 4,000-year-old Aṣṭādhyāyī.
-        <br><br>
-        <strong style="color:var(--t1)">Drag to rotate · Scroll to zoom</strong>
-      </p>
-    </div>
-  </section>
+  <!-- UPANISHADIC QUOTE BREAK -->
+  <div class="skt-break">
+    <div class="skt-verse">तत्त्वमसि</div>
+    <div class="skt-src">Chāndogya Upaniṣad 6.8.7 · Mahāvākya</div>
+    <div class="skt-meaning">Thou art that — the individual self and the ground of all consciousness are not two.</div>
+  </div>
 
   <!-- ═══════ PROJECTS ═══════ -->
-  <section class="section proj-sec" id="research">
-    <div class="stag">Research & Projects</div>
-    <h2 class="sec-h">My<br>Work</h2>
+  <section class="section proj-sec" id="projects">
+    <div class="stag">Philosophical Research in Practice</div>
+    <h2 class="sec-h">Built<br>Work</h2>
     <div class="pstack">
 
       <div class="pw">
@@ -678,16 +853,16 @@ footer{
           <div class="proj-top">
             <div class="proj-num">01</div>
             <div class="proj-inf">
-              <div class="proj-cat">Research · Sanskrit NLP</div>
-              <div class="proj-title">Sanskrit AI & Computational Linguistics</div>
-              <div class="ptags"><span class="ptag tvi">NLP</span><span class="ptag tcy">Python</span><span class="ptag tgo">Sanskrit</span><span class="ptag tro">Deep Learning</span></div>
+              <div class="proj-cat">Sanskrit NLP · Semantic Mapping · LLM Integration</div>
+              <div class="proj-title">Vachana Vijñāna — Computational Wellness Application</div>
+              <div class="ptags"><span class="ptag tvi">Vachana Corpus</span><span class="ptag tcy">Anthropic Claude</span><span class="ptag tgo">Kannada / English</span><span class="ptag tro">Ontology Alignment</span></div>
             </div>
           </div>
           <div class="pbody">
-            <div class="ppanel"><div class="ppanel-icon">🔤</div><div class="ppanel-t">Morphological Analysis</div><div class="ppanel-d">Applying ML to Sanskrit morphology — automating sandhi splitting and compound word (samāsa) analysis using Pāṇini's rules.</div></div>
-            <div class="ppanel"><div class="ppanel-icon">📖</div><div class="ppanel-t">Text Digitization</div><div class="ppanel-d">Pipelines for digitizing Sanskrit manuscripts using OCR, NLP tagging, and knowledge graph construction.</div></div>
-            <div class="ppanel"><div class="ppanel-icon">🤖</div><div class="ppanel-t">LLM for Sanskrit</div><div class="ppanel-d">Exploring fine-tuned large language models for Sanskrit translation, Q&A, and cross-lingual transfer.</div></div>
-            <div class="ppanel"><div class="ppanel-icon">🧮</div><div class="ppanel-t">Computational Grammar</div><div class="ppanel-d">Formal representation of Pāṇini's Aṣṭādhyāyī rules as a computational engine — core of my PhD proposal.</div></div>
+            <div class="ppanel"><div class="ppanel-icon">🧘</div><div class="ppanel-t">Vedāntic Wellbeing</div><div class="ppanel-d">The śaraṇas understood suffering and liberation with precision. This application maps their vocabulary — linga, sthala, bhakti, siddhi — onto contemporary psychological categories. Vedāntic soteriology meets modern affective science.</div></div>
+            <div class="ppanel"><div class="ppanel-icon">🧩</div><div class="ppanel-t">Ontological Alignment</div><div class="ppanel-d">Mapping 12th-century philosophical vocabulary to contemporary affective states required formal alignment between two epistemic frameworks separated by 900 years and two languages.</div></div>
+            <div class="ppanel"><div class="ppanel-icon">✨</div><div class="ppanel-t">First of Its Kind</div><div class="ppanel-d">No prior computational work on Vachana philosophy as a framework for mental wellbeing exists. The Vīraśaiva tradition has rich psychological depth — it simply has not been made computationally accessible.</div></div>
+            <div class="ppanel"><div class="ppanel-icon">🔬</div><div class="ppanel-t">Domain Depth Required</div><div class="ppanel-d">The śaraṇas wrote in 12th-century Halagannada with dense philosophical layering. This is not a text you can process without understanding Vīraśaiva ontology from the inside.</div></div>
           </div>
         </div>
       </div>
@@ -697,16 +872,16 @@ footer{
           <div class="proj-top">
             <div class="proj-num">02</div>
             <div class="proj-inf">
-              <div class="proj-cat">Development · Web & Tools</div>
-              <div class="proj-title">Academic Portfolios & Web Projects</div>
-              <div class="ptags"><span class="ptag tcy">HTML/CSS/JS</span><span class="ptag tvi">GSAP</span><span class="ptag tgo">Three.js</span><span class="ptag tgr">GitHub Pages</span></div>
+              <div class="proj-cat">Retrieval-Augmented Generation · Classical Text Processing</div>
+              <div class="proj-title">RAG System for Brahmasūtra Śāṅkarabhāṣya</div>
+              <div class="ptags"><span class="ptag tvi">RAG</span><span class="ptag tcy">Sanskrit</span><span class="ptag tgo">Śaṅkarācārya</span><span class="ptag tgr">Scholarly Querying</span></div>
             </div>
           </div>
           <div class="pbody">
-            <div class="ppanel"><div class="ppanel-icon">🎓</div><div class="ppanel-t">Professor Portfolio</div><div class="ppanel-d">Designed and deployed a full academic portfolio for Dr. Saroj Kumar Padhi (Professor, BHU SVDV) — live on GitHub Pages.</div></div>
-            <div class="ppanel"><div class="ppanel-icon">🌐</div><div class="ppanel-t">This Portfolio</div><div class="ppanel-d">Three.js galaxy + Sanskrit sphere, GSAP ScrollTrigger, glassmorphism cards — built and deployed on GitHub Pages.</div></div>
-            <div class="ppanel"><div class="ppanel-icon">⚙️</div><div class="ppanel-t">Research Tools</div><div class="ppanel-d">Tokenizers, transliteration converters, and Sanskrit corpus analyzers written in Python.</div></div>
-            <div class="ppanel"><div class="ppanel-icon">📊</div><div class="ppanel-t">Data Pipelines</div><div class="ppanel-d">Python pipelines collecting and cleaning Sanskrit corpora from GRETIL and the Digital Corpus of Sanskrit.</div></div>
+            <div class="ppanel"><div class="ppanel-icon">📖</div><div class="ppanel-t">Most Complex Text</div><div class="ppanel-d">Śaṅkarācārya's Brahmasūtrabhāṣya — one of the most structurally complex Sanskrit texts, with nested citation, refutation, and siddhānta layers.</div></div>
+            <div class="ppanel"><div class="ppanel-icon">🔍</div><div class="ppanel-t">Beyond Keyword Search</div><div class="ppanel-d">RAG pipeline enables semantic scholarly querying — finding conceptual connections across the text that keyword search cannot surface.</div></div>
+            <div class="ppanel"><div class="ppanel-icon">⚙️</div><div class="ppanel-t">Technical Challenge</div><div class="ppanel-d">Handling Sanskrit sandhi in retrieval, preserving nested commentary structure, and semantic chunking that respects philosophical argument units.</div></div>
+            <div class="ppanel"><div class="ppanel-icon">🏛️</div><div class="ppanel-t">Scholarly Impact</div><div class="ppanel-d">Designed for academic use — enabling researchers to query the foundational text of Advaita Vedānta with precision and citation traceability.</div></div>
           </div>
         </div>
       </div>
@@ -716,16 +891,54 @@ footer{
           <div class="proj-top">
             <div class="proj-num">03</div>
             <div class="proj-inf">
-              <div class="proj-cat">Scholarship · IIT PhD Prep</div>
-              <div class="proj-title">Research Proposal & Academic Work</div>
-              <div class="ptags"><span class="ptag tgo">IIT PhD</span><span class="ptag tvi">Comp. Linguistics</span><span class="ptag tro">Sanskrit</span></div>
+              <div class="proj-cat">Corpus NLP · Embedding Models · Sanskrit</div>
+              <div class="proj-title">Sloka Kosha — Sanskrit Semantic Search</div>
+              <div class="ptags"><span class="ptag tgo">Sanskrit</span><span class="ptag tcy">Embeddings</span><span class="ptag tvi">Sandhi Resolution</span><span class="ptag tro">Semantic Search</span></div>
             </div>
           </div>
           <div class="pbody">
-            <div class="ppanel"><div class="ppanel-icon">🏛️</div><div class="ppanel-t">Research Proposal</div><div class="ppanel-d">Developing a formal PhD proposal on AI-assisted Sanskrit grammar reconstruction and Vedic text annotation.</div></div>
-            <div class="ppanel"><div class="ppanel-icon">📝</div><div class="ppanel-t">Literature Survey</div><div class="ppanel-d">Surveying computational Sanskrit tools: Heritage Platform, Sanskrit Heritage Site, and JNU NLP group.</div></div>
-            <div class="ppanel"><div class="ppanel-icon">🔬</div><div class="ppanel-t">Interdisciplinary Study</div><div class="ppanel-d">ML fundamentals (Andrew Ng), NLP (Stanford CS224N), and deep Sanskrit grammar — building the bridge.</div></div>
-            <div class="ppanel"><div class="ppanel-icon">🤝</div><div class="ppanel-t">Academic Collaboration</div><div class="ppanel-d">Tech-enabled research assistance at BHU SVDV — portfolio creation, digital archiving, faculty support.</div></div>
+            <div class="ppanel"><div class="ppanel-icon">🔎</div><div class="ppanel-t">Semantic Search Engine</div><div class="ppanel-d">Search Sanskrit ślokas by meaning, not keywords — using embedding models tuned for morphologically rich classical language.</div></div>
+            <div class="ppanel"><div class="ppanel-icon">✂️</div><div class="ppanel-t">Sandhi Resolution</div><div class="ppanel-d">Addresses core challenges: sandhi decomposition before embedding, compound word analysis, and meaning-preserving chunking for ślokas.</div></div>
+            <div class="ppanel"><div class="ppanel-icon">📐</div><div class="ppanel-t">Embedding Challenge</div><div class="ppanel-d">Standard embedding models fail on Sanskrit — morphological richness means word-form variation is extreme. Custom preprocessing pipeline built from scratch.</div></div>
+            <div class="ppanel"><div class="ppanel-icon">📚</div><div class="ppanel-t">Corpus Scale</div><div class="ppanel-d">Indexed across major Sanskrit corpora — Gītā, Upaniṣads, Rāmāyaṇa — enabling cross-text semantic discovery for scholars.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pw">
+        <div class="proj-card" id="pc3" style="top:184px">
+          <div class="proj-top">
+            <div class="proj-num">04</div>
+            <div class="proj-inf">
+              <div class="proj-cat">Dialogue Systems · Devanagari Rendering · Sanskrit NLP</div>
+              <div class="proj-title">Sanskrit Shloka Chatbot</div>
+              <div class="ptags"><span class="ptag tcy">Sanskrit</span><span class="ptag tvi">Devanagari</span><span class="ptag tgo">Dialogue Systems</span><span class="ptag tgr">Script Normalization</span></div>
+            </div>
+          </div>
+          <div class="pbody">
+            <div class="ppanel"><div class="ppanel-icon">💬</div><div class="ppanel-t">Interactive Sanskrit</div><div class="ppanel-d">Conversational interface for Sanskrit verse — users query in English or transliteration, responses include accurate Devanagari rendering.</div></div>
+            <div class="ppanel"><div class="ppanel-icon">🖋️</div><div class="ppanel-t">Script Precision</div><div class="ppanel-d">Addresses diacritic normalization failures that plague standard NLP pipelines — anusvāra, visarga, and avagraha rendered correctly throughout.</div></div>
+            <div class="ppanel"><div class="ppanel-icon">🔊</div><div class="ppanel-t">Prosodic Awareness</div><div class="ppanel-d">Meter recognition built in — chatbot identifies anuṣṭubh, śārdūlavikrīḍita, and other chandas patterns before responding.</div></div>
+            <div class="ppanel"><div class="ppanel-icon">🌐</div><div class="ppanel-t">Multilingual Bridge</div><div class="ppanel-d">Sanskrit ↔ English ↔ IAST ↔ Devanagari — seamless script and language switching in a single conversation thread.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pw">
+        <div class="proj-card" id="pc4" style="top:212px">
+          <div class="proj-top">
+            <div class="proj-num">05</div>
+            <div class="proj-inf">
+              <div class="proj-cat">Research Infrastructure · Workflow Automation</div>
+              <div class="proj-title">Research Infrastructure Tools</div>
+              <div class="ptags"><span class="ptag tvi">Claude API</span><span class="ptag tcy">Python</span><span class="ptag tgo">Research Automation</span><span class="ptag tgr">Active Use</span></div>
+            </div>
+          </div>
+          <div class="pbody">
+            <div class="ppanel"><div class="ppanel-icon">🔭</div><div class="ppanel-t">Research Gap Finder</div><div class="ppanel-d">Claude-based tool that systematically maps gaps in the Sanskrit NLP and IKS computational literature — identifying where original contribution is possible.</div></div>
+            <div class="ppanel"><div class="ppanel-icon">⚡</div><div class="ppanel-t">General Research Workflow</div><div class="ppanel-d">Modular automation skill for literature survey, draft generation, citation management, and cross-reference verification — in active daily use.</div></div>
+            <div class="ppanel"><div class="ppanel-icon">🤝</div><div class="ppanel-t">Collaborative Use</div><div class="ppanel-d">Tools now used for both personal research and collaborative academic work — validated by real scholarly tasks, not just demos.</div></div>
+            <div class="ppanel"><div class="ppanel-icon">🔧</div><div class="ppanel-t">Technical Stack</div><div class="ppanel-d">Anthropic Claude API · Python · modular skill architecture · REST API integration — designed for extension and adaptation.</div></div>
           </div>
         </div>
       </div>
@@ -733,25 +946,65 @@ footer{
     </div>
   </section>
 
-  <!-- ═══════ EXPERIENCE ═══════ -->
-  <section class="section exp-sec" id="experience">
-    <div class="stag">Professional Journey</div>
-    <h2 class="sec-h">Experience</h2>
+  <!-- ═══════ SCHOLARLY OUTPUTS ═══════ -->
+  <section class="section out-sec" id="outputs">
+    <div class="stag">Scholarly Outputs</div>
+    <h2 class="sec-h">Written<br>Work</h2>
+    <div class="out-grid">
+      <div class="out-card">
+        <div class="out-type">Abstract · Sanskrit Medium</div>
+        <div class="out-title">Vidhi in Vedānta</div>
+        <div class="out-desc">Sanskrit-medium scholarly draft on the concept of injunction (vidhi) in Advaita epistemology — examining how Mīmāṃsā and Vedāntic frameworks handle prescriptive speech acts, with implications for formal semantics.</div>
+      </div>
+      <div class="out-card">
+        <div class="out-type">Translation · Critical Annotation</div>
+        <div class="out-title">Bṛhannīlatantram, Chapters 14–16</div>
+        <div class="out-desc">Full IAST apparatus and critical annotation of Chapters 14–16 (Kāmākhyā Pūjā · Nīlakuṭa Māhātmya · Pūjā Vidhi) — with scholarly commentary on ritual grammar and Āgamic textual tradition.</div>
+      </div>
+      <div class="out-card">
+        <div class="out-type">Technical Analysis</div>
+        <div class="out-title">Shaabdabodha Platform — Competitive Analysis</div>
+        <div class="out-desc">Technical and scholarly analysis of the Shaabdabodha Sanskrit NLP platform — identifying its computational architecture, limitations, and the research gaps my work addresses. Structured as a positioning document for PhD applications.</div>
+      </div>
+      <div class="out-card">
+        <div class="out-type">PhD Research Proposal</div>
+        <div class="out-title">Sanskrit NLP &amp; Indian Knowledge Systems</div>
+        <div class="out-desc">Formal PhD research proposal submitted to IIT Madras · IIT Roorkee · IIT Delhi · IIT Bombay — proposing a computational grammar and NLP toolkit for the Vīraśaiva-Lingāyata corpus as a doctoral research programme.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UPANISHADIC QUOTE BREAK -->
+  <div class="skt-break">
+    <div class="skt-verse">श्रद्धावान् लभते ज्ञानम्</div>
+    <div class="skt-src">Bhagavad Gītā 4.39</div>
+    <div class="skt-meaning">The one with sincere faith attains knowledge.</div>
+  </div>
+
+  <!-- ═══════ EDUCATION ═══════ -->
+  <section class="section exp-sec" id="education">
+    <div class="stag">Education &amp; Credentials</div>
+    <h2 class="sec-h">Academic<br>Record</h2>
     <div class="tl">
       <div class="tl-card cur">
-        <div class="tl-hd"><div class="tl-role">Independent Research Scholar</div><div class="tl-period">2024 — Present</div></div>
-        <div class="tl-org">Sanskrit × AI Research · Self-directed</div>
-        <div class="tl-desc">Independent research at the intersection of Sanskrit studies and AI. Building computational tools for text analysis, preparing IIT PhD research proposal, and developing AI solutions for ancient language processing.</div>
+        <div class="tl-hd"><div class="tl-role">PhD Applicant — Sanskrit Computational Linguistics</div><div class="tl-period">2025 — Applied</div></div>
+        <div class="tl-org">IIT Madras · IIT Roorkee · IIT Delhi · IIT Bombay — IKS / HSS Departments</div>
+        <div class="tl-desc">Applied to IIT programs under Indian Knowledge Systems (IKS) and Humanities &amp; Social Sciences with computational focus. The research proposal I submitted is for building the first formal NLP toolkit for the Vīraśaiva-Lingāyata corpus — a gap that I think is worth five years of doctoral work.</div>
       </div>
       <div class="tl-card">
-        <div class="tl-hd"><div class="tl-role">Academic Tech Consultant</div><div class="tl-period">2023 — 2024</div></div>
-        <div class="tl-org">Faculty of SVDV · Banaras Hindu University</div>
-        <div class="tl-desc">Technology support for academic portfolio development, digital archiving of Sanskrit research, and web presence for faculty. Built portfolio websites and research showcase platforms.</div>
+        <div class="tl-hd"><div class="tl-role">MA, Advaita Vedānta</div><div class="tl-period">Completed</div></div>
+        <div class="tl-org">Banaras Hindu University</div>
+        <div class="tl-desc">Graduate study through BHU — primary texts, Brahmasūtrabhāṣya, Upaniṣads, Mīmāṃsā epistemology. What I learned here is directly connected to what I am now trying to formalize computationally. The concepts did not change; the medium did.</div>
       </div>
       <div class="tl-card">
-        <div class="tl-hd"><div class="tl-role">Freelance Web Developer & Designer</div><div class="tl-period">2022 — 2023</div></div>
-        <div class="tl-org">Freelance · Various Clients</div>
-        <div class="tl-desc">Designed and developed websites for clients in education, academic, and cultural sectors — focused on performance, accessibility, and premium modern UI/UX.</div>
+        <div class="tl-hd"><div class="tl-role">UGC NET — Traditional Subjects</div><div class="tl-period">Qualified</div></div>
+        <div class="tl-org">Code 73</div>
+        <div class="tl-desc">Qualified UGC NET in Traditional Subjects (Code 73) — the national eligibility credential for research fellowships and lectureship in classical Indian scholarship.</div>
+      </div>
+      <div class="tl-card">
+        <div class="tl-hd"><div class="tl-role">Gurukula Formation — Sanskrit &amp; Śāstra</div><div class="tl-period">Residential · 5 Years</div></div>
+        <div class="tl-org">Veda Vijñāna Gurukulam · Bangalore</div>
+        <div class="tl-desc">Five years living inside the tradition — daily study of Pāṇinian grammar, Advaita Vedānta, Āgamic texts, Brahmasūtra, Upaniṣads, and the Vachana corpus. This was not a course. It was a way of life, and the grounding it gave me is something I carry into every research question I now ask.</div>
       </div>
     </div>
   </section>
@@ -759,33 +1012,55 @@ footer{
   <!-- ═══════ SKILLS ═══════ -->
   <section class="section skill-sec" id="skills">
     <div class="stag">Capabilities</div>
-    <h2 class="sec-h">Skills &amp;<br>Tools</h2>
+    <h2 class="sec-h">Skills &amp;<br>Languages</h2>
     <div class="sgrid">
-      <div class="s-card"><span class="s-icon">🔤</span><div class="s-name">Sanskrit & Classical Languages</div><div class="s-desc">Pāṇinian grammar, Vedic texts, Upaniṣads, Indian philosophy. Primary source reading and critical analysis.</div><div class="s-lvl"><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p on"></div></div></div>
-      <div class="s-card"><span class="s-icon">🤖</span><div class="s-name">Machine Learning & AI</div><div class="s-desc">Supervised/unsupervised learning, neural networks, transformers. TensorFlow, PyTorch, HuggingFace.</div><div class="s-lvl"><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p"></div></div></div>
-      <div class="s-card"><span class="s-icon">🐍</span><div class="s-name">Python & Data Science</div><div class="s-desc">NLP pipelines, data processing, research automation. NLTK, spaCy, Pandas, NumPy, Jupyter.</div><div class="s-lvl"><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p"></div></div></div>
-      <div class="s-card"><span class="s-icon">🌐</span><div class="s-name">Web Development</div><div class="s-desc">HTML5, CSS3, JS, React — modern animated web apps. GSAP, Three.js, glassmorphism, premium UI.</div><div class="s-lvl"><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p"></div></div></div>
-      <div class="s-card"><span class="s-icon">💬</span><div class="s-name">NLP & Computational Linguistics</div><div class="s-desc">Tokenization, morphological analysis, POS tagging, dependency parsing — applied to Sanskrit.</div><div class="s-lvl"><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p"></div></div></div>
-      <div class="s-card"><span class="s-icon">🔬</span><div class="s-name">Research & Academic Writing</div><div class="s-desc">Literature surveys, research proposals, critical analysis, LaTeX typesetting, interdisciplinary methodology.</div><div class="s-lvl"><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p on"></div></div></div>
+      <div class="s-card"><span class="s-icon">🐍</span><div class="s-name">Python · NLP · AI</div><div class="s-desc">Python (PEP 8 · type hints · Black · Ruff) · LLM integration · RAG pipelines · prompt engineering · semantic search · Anthropic API · LangChain · REST APIs.</div><div class="s-lvl"><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p"></div></div></div>
+      <div class="s-card"><span class="s-icon">📜</span><div class="s-name">Sanskrit &amp; Pāṇinian Grammar</div><div class="s-desc">Expert-level Sanskrit — Aṣṭādhyāyī rules, sandhi, kāraka, samāsa, pratyaya. Śāstric level: primary text reading, critical annotation, IAST transliteration, Devanagari rendering.</div><div class="s-lvl"><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p on"></div></div></div>
+      <div class="s-card"><span class="s-icon">🌍</span><div class="s-name">Linguistic Competencies</div><div class="s-desc">Kannada (native) · Sanskrit (expert, śāstric level) · English (academic) · Hindi. Scripts: Devanagari · Kannada · IAST · Halagannada (Old Kannada).</div><div class="s-lvl"><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p on"></div></div></div>
+      <div class="s-card"><span class="s-icon">🤖</span><div class="s-name">LLM Integration &amp; RAG</div><div class="s-desc">Retrieval-Augmented Generation · vector databases · embedding pipelines · semantic chunking · HuggingFace · FAISS · cross-encoder reranking. Delivered on real classical corpora.</div><div class="s-lvl"><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p"></div></div></div>
+      <div class="s-card"><span class="s-icon">📚</span><div class="s-name">Literary &amp; Knowledge Traditions</div><div class="s-desc">Brahmasūtra Śāṅkarabhāṣya · Upaniṣads · Vachana corpus · Bṛhannīlatantram · Śivāgama · Vīraśaiva-Lingāyata. Primary source reading and critical analysis.</div><div class="s-lvl"><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p on"></div></div></div>
+      <div class="s-card"><span class="s-icon">🔬</span><div class="s-name">Research &amp; Academic Writing</div><div class="s-desc">Literature surveys · PhD proposals · technical analysis · Sanskrit-medium scholarly drafts · critical annotation · LaTeX typesetting · Figma · Canva · Gamma · HeyGen.</div><div class="s-lvl"><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p on"></div><div class="lvl-p on"></div></div></div>
     </div>
+  </section>
+
+  <!-- removed sections -->
+
+  <!-- UPANISHADIC QUOTE BREAK -->
+  <div class="skt-break">
+    <div class="skt-verse">आनो भद्राः क्रतवो यन्तु विश्वतः</div>
+    <div class="skt-src">Ṛgveda 1.89.1 · Site Motto</div>
+    <div class="skt-meaning">Let noble thoughts come to us from every direction.</div>
+  </div>
+
+  <!-- ═══════ CLOSING UPANIṢADIC MANTRA ═══════ -->
+  <section class="quote-sec" id="quote">
+    <p class="big-quote">
+      "ॐ पूर्णमदः पूर्णमिदं पूर्णात्पूर्णमुदच्यते।<br>
+      पूर्णस्य पूर्णमादाय पूर्णमेवावशिष्यते॥"
+    </p>
+    <div class="quote-attr" style="margin-top:14px;font-size:clamp(10px,1.2vw,14px);color:var(--gold);font-style:italic;font-family:'Cormorant Garamond',serif">
+      That is Infinite, This is Infinite. From Infinity proceeds Infinity.<br>
+      Taking Infinity from Infinity, Infinity alone remains.
+    </div>
+    <div class="quote-attr" style="margin-top:18px">— Bṛhadāraṇyaka Upaniṣad · Śānti Mantra</div>
   </section>
 
   <!-- ═══════ CONTACT ═══════ -->
   <section class="section contact-sec" id="contact">
     <div class="c-inner">
       <h2 class="c-h">Let's<br>Connect</h2>
-      <p class="c-sub">Interested in Sanskrit NLP, AI collaboration, or just want to talk about ancient wisdom meeting modern intelligence?</p>
+      <p class="c-sub">For PhD research discussions, corpus collaboration, or NLP projects in classical Indian languages — reach out.</p>
       <div class="c-chips">
-        <a class="c-chip" href="mailto:shrikanthdevaru@gmail.com"><span class="c-chip-i">✉</span> shrikanthdevaru@gmail.com</a>
+        <a class="c-chip" href="mailto:shrikanth@[youremail]"><span class="c-chip-i">✉</span> shrikanth@[youremail]</a>
         <a class="c-chip" href="https://github.com/shrikanthdevaru-lang" target="_blank"><span class="c-chip-i">⌥</span> GitHub Profile</a>
-        <a class="c-chip" href="https://shrikanthdevaru-lang.github.io/dr-saroj-kumar-padhi-portfolio/" target="_blank"><span class="c-chip-i">🎓</span> Professor Portfolio</a>
+        <a class="c-chip" href="#statement"><span class="c-chip-i">📜</span> Research Statement</a>
       </div>
     </div>
   </section>
 
   <footer>
     <div class="foot-brand">Shrikanth Bandi</div>
-    <div class="foot-copy">Research Scholar · Sanskrit × AI<br>IIT PhD Aspirant · © 2025</div>
+    <div class="foot-copy">Advaita Vedānta Scholar · Philosophy of Mind · Sanskrit Epistemology<br>Bagalkote, Karnataka · PhD Applicant · © 2026</div>
   </footer>
 
 </div>
@@ -793,22 +1068,16 @@ footer{
 <script>
 gsap.registerPlugin(ScrollTrigger);
 
-/* ══════════════════════════════════════
-   SKILL — 3D WEB EXPERIENCE
-   Three.js Background Galaxy
-══════════════════════════════════════ */
+/* Three.js Background Galaxy */
 (function(){
   const canvas = document.getElementById('three-canvas');
   const renderer = new THREE.WebGLRenderer({canvas, alpha:true, antialias:false});
   renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));
   renderer.setSize(innerWidth, innerHeight);
   renderer.setClearColor(0x000000, 0);
-
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(60, innerWidth/innerHeight, 0.1, 2000);
   camera.position.z = 800;
-
-  /* 2400 stars in a sphere */
   const geo = new THREE.BufferGeometry();
   const N = 2400;
   const pos = new Float32Array(N*3), col = new Float32Array(N*3);
@@ -825,124 +1094,19 @@ gsap.registerPlugin(ScrollTrigger);
   geo.setAttribute('position',new THREE.BufferAttribute(pos,3));
   geo.setAttribute('color',new THREE.BufferAttribute(col,3));
   scene.add(new THREE.Points(geo, new THREE.PointsMaterial({size:1.8,vertexColors:true,transparent:true,opacity:0.85,sizeAttenuation:false})));
-
-  /* Nebula torus rings */
   for(let i=0;i<3;i++){
     const rg=new THREE.TorusGeometry(180+i*90,1.5,8,120);
     const rm=new THREE.MeshBasicMaterial({color:[0x9d71f8,0x38d9f5,0xc9a84c][i],transparent:true,opacity:0.06});
     const ring=new THREE.Mesh(rg,rm);
-    ring.rotation.x=Math.PI/(2.5+i*0.4);
-    ring.rotation.z=i*0.5;
-    scene.add(ring);
+    ring.rotation.x=Math.PI/(2.5+i*0.4);ring.rotation.z=i*0.5;scene.add(ring);
   }
-
   let mx=0, my=0, autoY=0;
   window.addEventListener('mousemove',e=>{mx=(e.clientX/innerWidth-0.5)*0.12;my=(e.clientY/innerHeight-0.5)*0.08;},{passive:true});
   window.addEventListener('resize',()=>{renderer.setSize(innerWidth,innerHeight);camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();},{passive:true});
-
-  (function loop(){
-    requestAnimationFrame(loop);
-    autoY += 0.00018;           /* slow, steady drift */
-    scene.rotation.y = autoY + mx;
-    scene.rotation.x += (my - scene.rotation.x) * 0.02;
-    renderer.render(scene, camera);
-  })();
+  (function loop(){requestAnimationFrame(loop);autoY+=0.00018;scene.rotation.y=autoY+mx;scene.rotation.x+=(my-scene.rotation.x)*0.02;renderer.render(scene,camera);})();
 })();
 
-/* ══════════════════════════════════════
-   SKILL — 3D WEB EXPERIENCE
-   Three.js Sanskrit Knowledge Sphere
-══════════════════════════════════════ */
-(function(){
-  const container = document.getElementById('globe-wrap');
-  const c2 = document.getElementById('globe-canvas');
-  const W=container.clientWidth, H=container.clientHeight;
-
-  const r2=new THREE.WebGLRenderer({canvas:c2,alpha:true,antialias:true});
-  r2.setPixelRatio(Math.min(devicePixelRatio,2));
-  r2.setSize(W,H);
-  r2.setClearColor(0x000000,0);
-
-  const sc2=new THREE.Scene();
-  const cam2=new THREE.PerspectiveCamera(50,W/H,0.1,500);
-  cam2.position.z=140;
-
-  sc2.add(new THREE.AmbientLight(0x9d71f8,0.5));
-  const dl=new THREE.DirectionalLight(0x38d9f5,1.2);dl.position.set(50,80,60);sc2.add(dl);
-  const dl2=new THREE.DirectionalLight(0xc9a84c,0.6);dl2.position.set(-60,-40,30);sc2.add(dl2);
-
-  /* Central sphere */
-  sc2.add(new THREE.Mesh(
-    new THREE.SphereGeometry(28,48,48),
-    new THREE.MeshPhongMaterial({color:0x04040c,emissive:0x9d71f8,emissiveIntensity:0.12,shininess:60,transparent:true,opacity:0.9})
-  ));
-  sc2.add(new THREE.Mesh(
-    new THREE.SphereGeometry(28.5,18,18),
-    new THREE.MeshBasicMaterial({color:0x9d71f8,transparent:true,opacity:0.08,wireframe:true})
-  ));
-
-  /* Concept nodes */
-  const concepts='संस्कृत पाणिनि NLP AI वेद शब्द वाक्य अर्थ ML RNN BERT OCR IIT PhD NLU अनुवाद ज्ञान शब्द कोड'.split(' ');
-  const nColors=[0x9d71f8,0x38d9f5,0xc9a84c,0xf472b6,0x4ade80];
-  const nodeGrp=new THREE.Group();
-  const nodes=concepts.map((ch,i)=>{
-    const θ=Math.random()*Math.PI*2, φ=Math.acos(2*Math.random()-1);
-    const r=42+Math.random()*18;
-    const n=new THREE.Mesh(
-      new THREE.SphereGeometry(1.4+Math.random()*0.8,8,8),
-      new THREE.MeshPhongMaterial({color:nColors[i%nColors.length],emissive:nColors[i%nColors.length],emissiveIntensity:0.5,shininess:80})
-    );
-    n.position.set(r*Math.sin(φ)*Math.cos(θ),r*Math.sin(φ)*Math.sin(θ),r*Math.cos(φ));
-    n.userData={phase:Math.random()*Math.PI*2,speed:0.3+Math.random()*0.5};
-    nodeGrp.add(n); return n;
-  });
-  sc2.add(nodeGrp);
-
-  /* Lines between nodes */
-  const lineGrp=new THREE.Group();
-  for(let i=0;i<20;i++){
-    const a=nodes[i%nodes.length], b=nodes[(i+4)%nodes.length];
-    lineGrp.add(new THREE.Line(
-      new THREE.BufferGeometry().setFromPoints([a.position,b.position]),
-      new THREE.LineBasicMaterial({color:0x9d71f8,transparent:true,opacity:0.15})
-    ));
-  }
-  sc2.add(lineGrp);
-
-  /* Orbit rings */
-  [38,54,66].forEach((r,i)=>{
-    const m=new THREE.Mesh(new THREE.TorusGeometry(r,0.3,8,80),new THREE.MeshBasicMaterial({color:[0x9d71f8,0x38d9f5,0xc9a84c][i],transparent:true,opacity:0.18}));
-    m.rotation.x=(Math.PI/3)*(i+1); m.rotation.z=i*0.6; sc2.add(m);
-  });
-
-  /* Drag */
-  let drag=false,pvx=0,pvy=0,vx=0.003,vy=0.001;
-  const el=r2.domElement; el.style.pointerEvents='auto';
-  el.addEventListener('mousedown',e=>{drag=true;pvx=e.clientX;pvy=e.clientY});
-  window.addEventListener('mousemove',e=>{if(!drag)return;vx=(e.clientX-pvx)*0.005;vy=(e.clientY-pvy)*0.005;pvx=e.clientX;pvy=e.clientY});
-  window.addEventListener('mouseup',()=>drag=false);
-  el.addEventListener('wheel',e=>{cam2.position.z=Math.max(80,Math.min(200,cam2.position.z+e.deltaY*0.08));},{passive:true});
-
-  let t2=0;
-  (function loop2(){
-    requestAnimationFrame(loop2);
-    t2+=0.012;
-    nodeGrp.rotation.y+=vx*0.95; nodeGrp.rotation.x+=vy*0.95;
-    if(!drag){vx*=0.97;vy*=0.97;vx+=0.0005}
-    nodes.forEach(n=>{const p=0.9+0.15*Math.sin(t2*n.userData.speed+n.userData.phase);n.scale.setScalar(p)});
-    lineGrp.rotation.copy(nodeGrp.rotation);
-    r2.render(sc2,cam2);
-  })();
-
-  window.addEventListener('resize',()=>{const nW=container.clientWidth,nH=container.clientHeight;r2.setSize(nW,nH);cam2.aspect=nW/nH;cam2.updateProjectionMatrix();},{passive:true});
-})();
-
-/* ══════════════════════════════════════
-   SKILL — ANTIGRAVITY DESIGN EXPERT
-   GSAP ScrollTrigger Animations
-══════════════════════════════════════ */
-
-/* Hero entrance */
+/* GSAP Hero entrance */
 gsap.set(['#h-badge','#h-name','#h-desc','#h-stats','#h-ctas','#h-pills'],{opacity:0,y:30});
 gsap.timeline({delay:0.1})
   .to('#h-badge', {opacity:1,y:0,duration:0.7,ease:'power3.out'})
@@ -952,35 +1116,53 @@ gsap.timeline({delay:0.1})
   .to('#h-ctas',  {opacity:1,y:0,duration:0.7,ease:'power3.out'},'-=0.5')
   .to('#h-pills', {opacity:1,y:0,duration:0.7,ease:'power3.out'},'-=0.5');
 
-/* Section headings — float in */
+/* Section headings */
 document.querySelectorAll('.sec-h').forEach(el=>{
   gsap.fromTo(el,{opacity:0,y:50},{opacity:1,y:0,duration:0.9,ease:'power3.out',
     scrollTrigger:{trigger:el,start:'top 85%',once:true}});
 });
 
-/* About cards — staggered with rotateX depth */
+/* About/pillar cards */
 gsap.utils.toArray('.a-card').forEach((el,i)=>{
-  gsap.fromTo(el,{opacity:0,y:60,rotateX:6},{opacity:1,y:0,rotateX:0,duration:0.85,ease:'power3.out',delay:i*0.1,
+  gsap.fromTo(el,{opacity:0,y:60,rotateX:6},{opacity:1,y:0,rotateX:0,duration:0.85,ease:'power3.out',delay:i*0.12,
     scrollTrigger:{trigger:el,start:'top 88%',once:true}});
 });
 
-/* Timeline cards — slide from left */
+/* Timeline cards */
 gsap.utils.toArray('.tl-card').forEach((el,i)=>{
   gsap.fromTo(el,{opacity:0,x:-50},{opacity:1,x:0,duration:0.8,ease:'power3.out',delay:i*0.12,
     scrollTrigger:{trigger:el,start:'top 88%',once:true}});
 });
 
-/* Skill cards — dominoes drop */
+/* Skill cards */
 gsap.utils.toArray('.s-card').forEach((el,i)=>{
   gsap.fromTo(el,{opacity:0,y:50,scale:0.93},{opacity:1,y:0,scale:1,duration:0.75,ease:'back.out(1.4)',delay:i*0.08,
     scrollTrigger:{trigger:el,start:'top 90%',once:true}});
 });
 
-/* 3D globe section */
-gsap.from('#globe-wrap',{opacity:0,scale:0.85,rotateY:20,duration:1.2,ease:'power3.out',
-  scrollTrigger:{trigger:'#globe-sec',start:'top 80%',once:true}});
-gsap.from('.scene-info',{opacity:0,x:40,duration:1,ease:'power3.out',delay:0.25,
-  scrollTrigger:{trigger:'#globe-sec',start:'top 80%',once:true}});
+/* Output cards */
+gsap.utils.toArray('.out-card').forEach((el,i)=>{
+  gsap.fromTo(el,{opacity:0,x:-30},{opacity:1,x:0,duration:0.8,ease:'power3.out',delay:i*0.1,
+    scrollTrigger:{trigger:el,start:'top 88%',once:true}});
+});
+
+/* Civic cards */
+gsap.utils.toArray('.civic-card').forEach((el,i)=>{
+  gsap.fromTo(el,{opacity:0,y:40},{opacity:1,y:0,duration:0.7,ease:'power3.out',delay:i*0.08,
+    scrollTrigger:{trigger:el,start:'top 90%',once:true}});
+});
+
+/* Research statement */
+gsap.fromTo('.rs-card',{opacity:0,y:40},{opacity:1,y:0,duration:1,ease:'power3.out',
+  scrollTrigger:{trigger:'.rs-card',start:'top 85%',once:true}});
+
+/* Institutional card */
+gsap.fromTo('.inst-card',{opacity:0,y:40},{opacity:1,y:0,duration:1,ease:'power3.out',
+  scrollTrigger:{trigger:'.inst-card',start:'top 85%',once:true}});
+
+/* Closing quote */
+gsap.fromTo('.big-quote',{opacity:0,y:30},{opacity:1,y:0,duration:1.2,ease:'power3.out',
+  scrollTrigger:{trigger:'.big-quote',start:'top 85%',once:true}});
 
 /* Contact */
 gsap.utils.toArray('.c-inner > *').forEach((el,i)=>{
@@ -988,99 +1170,25 @@ gsap.utils.toArray('.c-inner > *').forEach((el,i)=>{
     scrollTrigger:{trigger:el,start:'top 88%',once:true}});
 });
 
-/* GSAP parallax — hero name moves slower on scroll */
+/* Hero parallax */
 gsap.to('#h-name',{yPercent:-14,
   scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
 
-/* ══════════════════════════════════════
-   Skill bars
-══════════════════════════════════════ */
-const barObs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      e.target.querySelectorAll('.sbar-fill').forEach(f=>{
-        gsap.to(f,{scaleX:f.dataset.w,duration:1.5,ease:'power3.out',delay:0.2});
-      });
-      barObs.unobserve(e.target);
-    }
-  });
-},{threshold:0.3});
-const sbEl=document.getElementById('skill-bars');
-if(sbEl) barObs.observe(sbEl);
-
-/* ══════════════════════════════════════
-   Counters
-══════════════════════════════════════ */
-function count(el,to,dur){
-  const s=performance.now();
-  (function fn(now){const p=Math.min((now-s)/dur,1);el.textContent=Math.round(to*p)+'+';if(p<1)requestAnimationFrame(fn);})(performance.now());
-}
-const cObs=new IntersectionObserver(e=>{
-  if(e[0].isIntersecting){
-    count(document.getElementById('c1'),6,1300);
-    count(document.getElementById('c2'),8,1500);
-    count(document.getElementById('c3'),12,1700);
-    cObs.disconnect();
-  }
-},{threshold:0.4});
-cObs.observe(document.getElementById('c1'));
-
-/* ══════════════════════════════════════
-   Marquee — scroll driven
-══════════════════════════════════════ */
-const items=[
-  {g:'संस्कृत',t:'Sanskrit NLP',s:'Computational Linguistics'},
-  {g:'AI',t:'Artificial Intelligence',s:'Deep Learning · LLMs'},
-  {g:'पाणिनि',t:"Pāṇini's Grammar",s:'Aṣṭādhyāyī · 4000 Rules'},
-  {g:'NLP',t:'Natural Language Processing',s:'Text · Transformers'},
-  {g:'वेद',t:'Vedic Studies',s:'Ancient Text AI'},
-  {g:'IIT',t:'IIT PhD Research',s:'Aspirant · 2025'},
-  {g:'ML',t:'Machine Learning',s:'Neural Networks · PyTorch'},
-  {g:'OCR',t:'Manuscript Digitization',s:'Sanskrit OCR'},
-  {g:'Git',t:'Open Source',s:'GitHub · Collaboration'},
-  {g:'वाक्य',t:'Syntax Analysis',s:'Dependency Parsing'},
-  {g:'🌐',t:'Web Development',s:'React · GSAP · Three.js'},
-  {g:'ब्रह्म',t:'Vedānta Philosophy',s:'Advaita · Non-dualism'},
-  {g:'LLM',t:'Large Language Models',s:'BERT · GPT · Fine-tuning'},
-  {g:'डेटा',t:'Data Science',s:'Python · Pandas · Jupyter'},
-  {g:'अनुवाद',t:'Machine Translation',s:'Sanskrit ↔ Modern'},
-  {g:'शब्द',t:'Morphology',s:'Sandhi · Kāraka · Pratyaya'},
-  {g:'ज्ञान',t:'Knowledge Graphs',s:'Sanskrit Ontologies · RDF'},
-];
-const tile=d=>`<div class="m-card"><div class="m-glyph">${d.g}</div><div class="m-title">${d.t}</div><div class="m-sub">${d.s}</div></div>`;
-const r1=items.slice(0,9), r2=items.slice(9);
-document.getElementById('mr1').innerHTML=[...r1,...r1,...r1].map(tile).join('');
-document.getElementById('mr2').innerHTML=[...r2,...r2,...r2].map(tile).join('');
-const msec=document.querySelector('.marquee-wrap'),mr1=document.getElementById('mr1'),mr2=document.getElementById('mr2');
-let mraf;
-window.addEventListener('scroll',()=>{
-  if(!mraf) mraf=requestAnimationFrame(()=>{
-    const off=(-msec.getBoundingClientRect().top+innerHeight)*0.22;
-    mr1.style.transform=`translateX(${off-120}px)`;
-    mr2.style.transform=`translateX(${-(off-120)}px)`;
-    mraf=null;
-  });
-},{passive:true});
-
-/* ══════════════════════════════════════
-   Sticky card scale
-══════════════════════════════════════ */
+/* Sticky card scale */
 function updateCards(){
-  ['pc0','pc1','pc2'].forEach((id,i)=>{
+  ['pc0','pc1','pc2','pc3','pc4'].forEach((id,i)=>{
     const card=document.getElementById(id);if(!card)return;
     const rect=card.closest('.pw').getBoundingClientRect();
     const past=Math.max(0,-rect.bottom+innerHeight);
     const p=Math.min(1,past/(innerHeight*0.5));
-    card.style.transform=`scale(${1-(2-i)*0.03*p})`;
+    card.style.transform=`scale(${1-(4-i)*0.025*p})`;
     card.style.transformOrigin='top center';
   });
 }
 window.addEventListener('scroll',updateCards,{passive:true});
 updateCards();
 
-/* ══════════════════════════════════════
-   Progress + Nav
-══════════════════════════════════════ */
+/* Progress + Nav */
 const prog=document.getElementById('progress');
 const nav=document.getElementById('nav');
 window.addEventListener('scroll',()=>{
@@ -1088,17 +1196,13 @@ window.addEventListener('scroll',()=>{
   nav.classList.toggle('scrolled',window.scrollY>60);
 },{passive:true});
 
-/* ══════════════════════════════════════
-   Cursor glow (Antigravity Design)
-══════════════════════════════════════ */
+/* Cursor glow */
 if(window.matchMedia('(pointer:fine)').matches){
   const g=document.getElementById('cursor-glow');
   window.addEventListener('mousemove',e=>{g.style.left=e.clientX+'px';g.style.top=e.clientY+'px';},{passive:true});
 }
 
-/* ══════════════════════════════════════
-   3D Tilt on skill cards (Antigravity Design)
-══════════════════════════════════════ */
+/* 3D Tilt on skill cards */
 document.querySelectorAll('.s-card').forEach(card=>{
   card.addEventListener('mousemove',e=>{
     const rect=card.getBoundingClientRect();
@@ -1113,14 +1217,42 @@ document.querySelectorAll('.s-card').forEach(card=>{
   });
 });
 
-/* ══════════════════════════════════════
-   Orb parallax
-══════════════════════════════════════ */
+/* Orb parallax */
 window.addEventListener('scroll',()=>{
   const y=window.scrollY;
   document.querySelector('.o1').style.transform=`translateY(${y*.13}px)`;
   document.querySelector('.o2').style.transform=`translateY(${-y*.08}px)`;
   document.querySelector('.o3').style.transform=`translateY(${y*.06}px)`;
+},{passive:true});
+
+/* Marquee */
+const items=[
+  {g:'अद्वैत',t:'Advaita Vedānta',s:'Non-dual Philosophy of Mind'},
+  {g:'चित्',t:'Pure Consciousness',s:'Ancient & Modern Phenomenology'},
+  {g:'अध्यास',t:'Theory of Superimposition',s:'Cognition & Illusion'},
+  {g:'स्फोट',t:'Sphoṭa Theory',s:'Holistic Meaning Perception'},
+  {g:'ब्रह्म',t:'Brahmasūtrabhāṣya',s:'Śaṅkarācārya Exegesis'},
+  {g:'पाणिनि',t:"Pāṇinian Grammar",s:'Structural Semantics'},
+  {g:'प्रमाण',t:'Epistemology & Śabda',s:'Valid Means of Knowledge'},
+  {g:'IIT',t:'IIT PhD Aspirant',s:'Philosophy & IKS Focus'},
+  {g:'RAG',t:'Computational Exegesis',s:'RAG over Classical Texts'},
+  {g:'ವಚನ',t:'Vachana Epistemology',s:'12th-Century Soteriology'},
+  {g:'अन्तःकरण',t:'Antaḥkaraṇa Model',s:'Mind, Intellect, Ego, Memory'},
+  {g:'ज्ञान',t:'Knowledge Systems',s:'Classical & Modern Bridge'},
+];
+const tile=d=>`<div class="m-card"><div class="m-glyph">${d.g}</div><div class="m-title">${d.t}</div><div class="m-sub">${d.s}</div></div>`;
+const r1=items.slice(0,6), r2=items.slice(6);
+document.getElementById('mr1').innerHTML=[...r1,...r1,...r1].map(tile).join('');
+document.getElementById('mr2').innerHTML=[...r2,...r2,...r2].map(tile).join('');
+const msec=document.querySelector('.marquee-wrap'),mr1=document.getElementById('mr1'),mr2=document.getElementById('mr2');
+let mraf;
+window.addEventListener('scroll',()=>{
+  if(!mraf) mraf=requestAnimationFrame(()=>{
+    const off=(-msec.getBoundingClientRect().top+innerHeight)*0.22;
+    mr1.style.transform=`translateX(${off-120}px)`;
+    mr2.style.transform=`translateX(${-(off-120)}px)`;
+    mraf=null;
+  });
 },{passive:true});
 </script>
 </body>
